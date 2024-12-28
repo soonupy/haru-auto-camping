@@ -31,6 +31,13 @@
 <body>
     <div class="wrap">
         <header id="header-wrap">
+            <script>
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#header-wrap').innerHTML = data;
+                    })
+            </script>
         </header>
         <main class="banner-wrap">
             <div class="main-inner">
@@ -91,10 +98,12 @@
                             </p>
                         </li>
                         <li class="desc-2 description">
-                            <span>
-                                영업시간
-                            </span>
-                            <p>오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
+                            <div class="time-info">
+                                <span>
+                                    영업시간
+                                </span>
+                                <p>00:00 ~ 24:00</p>
+                            </div>
                         </li>
                         <li class="desc-3 description">
                             <span>
@@ -135,6 +144,13 @@
             </div>
         </section>
         <footer id="footer-wrap">
+            <script>
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#footer-wrap').innerHTML = data;
+                    })
+            </script>
         </footer>
     </div>
 </body>
