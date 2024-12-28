@@ -144,6 +144,7 @@ section {
         border-radius: 8px;
         cursor: pointer;
         /* max-width: calc((100% - 32px)/6); */
+        line-height: 1.;
         text-wrap: nowrap;
         font-weight: bold;
         flex: 0 1 148px;
@@ -153,6 +154,7 @@ section {
             font-weight: normal;
             font-size: 14px;
             color: #999;
+            line-height: 1.5;
         }
 
         &:hover {
