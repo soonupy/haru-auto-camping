@@ -1,0 +1,72 @@
+/* 서브 페이지 스타일 */
+section {
+    padding: 64px 32px;
+
+    &.category-wrap {
+        background-color: #fff;
+    }
+
+    .section-inner {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 128px;
+
+        h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .inner-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 64px;
+
+            .category-title, .content-title {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+                width: fit-content;
+                margin: 0 auto;
+
+                .category-title-en {
+                    font-size: 16px;
+                    color: #999;
+                }
+            }
+
+            .category-title { font-size: 32px; }
+            .content-title { font-size: 24px; }
+        }
+    }
+}
+
+.content-wrap {
+    display: none;
+    background-color: #f9f9f9;
+
+    &.category-1 { display: block; }
+
+    .inner-container {
+        .content-description {
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+
+            /* ... content-description 관련 스타일 ... */
+        }
+
+        .content-card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+
+            /* ... content-card 관련 스타일 ... */
+        }
+    }
+} 
