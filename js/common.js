@@ -1,3 +1,14 @@
+// 컴포넌트 경로 설정 함수
+function getComponentPath() {
+    const currentPath = window.location.pathname;
+    // index.html 또는 루트 경로인 경우
+    if (currentPath === '/index.html' || currentPath === '/') {
+        return './component/';
+    }
+    // 그 외의 경우 (하위 디렉토리의 HTML 파일들)
+    return '../component/';
+}
+
 // 컴포넌트 로드 함수
 function loadComponent(elementId, url) {
     fetch(url)
@@ -11,9 +22,10 @@ function loadComponent(elementId, url) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    loadComponent('#header-wrap', '../component/header.html');
-    loadComponent('#footer-wrap', '../component/footer.html');
-    loadComponent('#sidenav-wrap', '../component/sideNav.html');
+    const basePath = getComponentPath();
+    loadComponent('#header-wrap', basePath + 'header.html');
+    loadComponent('#footer-wrap', basePath + 'footer.html');
+    loadComponent('#sidenav-wrap', basePath + 'sideNav.html');
 });
 
 // 카테고리 선택 함수

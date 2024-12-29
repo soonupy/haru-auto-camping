@@ -157,6 +157,7 @@ section {
             font-size: 14px;
             color: #999;
             line-height: 1.5;
+            margin: 0 !important;
         }
 
         &:hover {
