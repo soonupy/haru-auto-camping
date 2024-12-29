@@ -10,12 +10,6 @@ function loadComponent(elementId, url) {
         .catch(error => console.error('컴포넌트 로드 실패:', error));
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    loadComponent('#header-wrap', '../component/header.html');
-    loadComponent('#footer-wrap', '../component/footer.html');
-    loadComponent('#sidenav-wrap', '../component/sideNav.html');
-});
-
 // 카테고리 선택 함수
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.content-wrap');

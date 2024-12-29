@@ -25,12 +25,15 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/common.css">
 
-    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
     <div class="wrap">
         <header id="header-wrap">
+            <script>
+                loadComponent('#header-wrap', './component/header.html');
+            </script>
         </header>
         <main class="banner-wrap">
             <div class="main-inner">
