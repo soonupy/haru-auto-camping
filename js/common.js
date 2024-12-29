@@ -1,20 +1,12 @@
 // 컴포넌트 로드 함수
-function loadComponent(elementId, url) {
+function loadComponent(selector, url) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            document
-                .querySelector(elementId)
-                .innerHTML = data;
-        })
-        .catch(error => console.error('컴포넌트 로드 실패:', error));
+            document.querySelector(selector).innerHTML = data;
+        });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    loadComponent('#header-wrap', '../component/header.html');
-    loadComponent('#footer-wrap', '../component/footer.html');
-    loadComponent('#sidenav-wrap', '../component/sideNav.html');
-});
 
 // 카테고리 선택 함수
 document.addEventListener('DOMContentLoaded', () => {

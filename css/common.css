@@ -32,7 +32,7 @@
             ul.nav-list {
                 display: flex;
                 align-items: center;
-                /* gap: 16px; */
+                gap: 16px;
 
                 li {
                     position: relative;

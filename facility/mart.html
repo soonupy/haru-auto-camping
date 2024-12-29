@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <title>index</title>
+    <title>HaruCamping</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,17 +20,23 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
-    <!-- Reset CSS and Custom Styles -->
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/common.css">
+    <base href="../">
 
-    <script src="../js/common.js"></script>
+    <!-- Reset CSS and Custom Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script src="js/pages.js"></script>
+    <script src="js/common.js"></script>
 </head>
 
 <body>
     <div class="wrap">
         <header id="header-wrap">
+            <!-- <script>
+                loadComponent('#header-wrap', './component/header.html');
+            </script> -->
         </header>
         <main class="banner-wrap">
             <div class="main-inner">
@@ -51,22 +57,34 @@
                     </h2>
                     <div class="category-list content-info">
                         <input type="radio" name="category" id="category-1">
-                        <label for="category-1">매점</label>
+                        <label for="category-1">매점
+                            <p>Mart</p>
+                        </label>
 
                         <input type="radio" name="category" id="category-2">
-                        <label for="category-2">편의시설</label>
+                        <label for="category-2">편의시설
+                            <p>Amenities</p>
+                        </label>
 
                         <input type="radio" name="category" id="category-3">
-                        <label for="category-3">산책로/포토존</label>
+                        <label for="category-3">산책로/포토존
+                            <p>Rest Area</p>
+                        </label>
 
                         <input type="radio" name="category" id="category-4">
-                        <label for="category-4">카페</label>
+                        <label for="category-4">카페
+                            <p>Cafe</p>
+                        </label>
 
                         <input type="radio" name="category" id="category-5">
-                        <label for="category-5">수영장</label>
+                        <label for="category-5">수영장
+                            <p>Pool</p>
+                        </label>
 
                         <input type="radio" name="category" id="category-6">
-                        <label for="category-6">전기차 충전소</label>
+                        <label for="category-6">전기차 충전소
+                            <p>EV Charging</p>
+                        </label>
                     </div>
                 </article>
             </div>
@@ -91,10 +109,12 @@
                             </p>
                         </li>
                         <li class="desc-2 description">
-                            <span>
-                                영업시간
-                            </span>
-                            <p>오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
+                            <div class="time-info">
+                                <span>
+                                    영업시간
+                                </span>
+                                <p>00:00 ~ 24:00</p>
+                            </div>
                         </li>
                         <li class="desc-3 description">
                             <span>
@@ -116,89 +136,22 @@
                     </h3>
                     <ul class="content-card">
                         <li class="img-card">
-                            <img src="../images/Mart.png" alt="캐디안 카드 1">
+                            <img src="images/Mart.png" alt="매점 내부">
                         </li>
                         <li class="img-card">
-                            <img src="../images/Mart.png" alt="캐디안 카드 1">
+                            <img src="images/Mart.png" alt="매점 내부">
 
                         </li>
                         <li class="img-card">
-                            <img src="../images/Mart.png" alt="캐디안 카드 1">
+                            <img src="images/Mart.png" alt="매점 내부">
 
                         </li>
                         <li class="img-card">
-                            <img src="../images/Mart.png" alt="캐디안 카드 1">
+                            <img src="images/Mart.png" alt="매점 내부">
 
                         </li>
                     </ul>
                 </article>
-            </div>
-        </section>
-        <section class="content-wrap category-2">
-            <div class="section-inner">
-
-                <!-- 캐드 소개 -->
-                <div class="inner-container">
-                    <h3 class="content-title">
-                        아레스
-                        <p class="category-title-en">AREAS</p>
-                    </h3>
-                    <ul class="content-description">
-                        <li class="desc-1 description">
-                            <span>
-                                캐디안이란?
-                            </span>
-                            <p>국산 캐드 프로그램으로 캐드 프로그램 중 가장 많이 사용되는 캐드 프로그램입니다.</p>
-                        </li>
-                        <li class="desc-2 description">
-                            <span>
-                                캐디안 사용법
-                            </span>
-                            <p>오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                        </li>
-                        <li class="desc-3 description">
-                            <span>
-                                캐디안 사용시 유의사항
-                            </span>
-                            <div class="Precautions">
-                                <p>캐디안은 오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                                <p>캐디안은 오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                                <p>캐디안은 오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="inner-container">
-                    <h3 class="content-title">
-                        캐디안
-                        <p class="category-title-en">CADIAN</p>
-                    </h3>
-                    <ul class="content-description">
-                        <li class="desc-1 description">
-                            <span>
-                                캐디안이란?
-                            </span>
-                            <p>국산 캐드 프로그램으로 캐드 프로그램 중 가장 많이 사용되는 캐드 프로그램입니다.</p>
-                        </li>
-                        <li class="desc-2 description">
-                            <span>
-                                캐디안 사용법
-                            </span>
-                            <p>오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                        </li>
-                        <li class="desc-3 description">
-                            <span>
-                                캐디안 사용시 유의사항
-                            </span>
-                            <div class="Precautions">
-                                <p>캐디안은 오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                                <p>캐디안은 오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                                <p>캐디안은 오토캐드와 비슷한 사용법으로 오토캐드를 사용하는 사람들이 많이 사용합니다.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </section>
         <footer id="footer-wrap">
