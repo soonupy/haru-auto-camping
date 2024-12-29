@@ -32,11 +32,7 @@
     <div class="wrap">
         <header id="header-wrap">
             <script>
-                fetch('header.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.querySelector('#header-wrap').innerHTML = data;
-                    })
+                loadComponent('#header-wrap', '../component/header.html');
             </script>
         </header>
         <main class="banner-wrap">
@@ -157,11 +153,7 @@
         </section>
         <footer id="footer-wrap">
             <script>
-                fetch('footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.querySelector('#footer-wrap').innerHTML = data;
-                    })
+                loadComponent('#footer-wrap', '../component/footer.html');
             </script>
         </footer>
     </div>
