@@ -11,9 +11,9 @@ function loadComponent(elementId, url) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    loadComponent('#header-wrap', '/header.html');
-    loadComponent('#footer-wrap', '/footer.html');
-    loadComponent('#sidenav-wrap', '/sideNav.html');
+    loadComponent('#header-wrap', '../component/header.html');
+    loadComponent('#footer-wrap', '../component/footer.html');
+    loadComponent('#sidenav-wrap', '../component/sideNav.html');
 });
 
 // 카테고리 선택 함수
