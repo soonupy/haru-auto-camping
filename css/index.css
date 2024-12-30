@@ -1,6 +1,7 @@
 /* 메인 페이지 스타일 */
 main {
     padding: 32px;
+    font-family: var(--common-font);
 
     .home-banner {
         position: relative;
@@ -13,7 +14,8 @@ main {
         padding: 64px;
         overflow: hidden;
         border-radius: 16px;
-        background-color: #C1DCDC;
+        background-color: var(--primary-color);
+        box-shadow: var(--general-box-shadow);
 
         .inner-container {
             position: relative;
@@ -29,12 +31,12 @@ main {
                 flex-direction: column;
                 gap: 24px;
                 width: 100%;
-                font-size: 48px;
+                font-size: 2rem;
                 font-weight: 700;
                 color: #fff;
 
                 p {
-                    font-size: 16px;
+                    font-size: 1rem;
                     font-weight: normal;
                     line-height: 1.75;
                     color: #222;
@@ -49,9 +51,9 @@ main {
                 margin-right: auto;
                 padding: 16px 64px;
                 border-radius: 8px;
-                background-color: #fff;
-                color: #222;
-                font-size: 16px;
+                background-color: var(--point-bgc);
+                color: var(--general-text-color);
+                font-size: 1rem;
             }
 
             .tent-content {
@@ -81,7 +83,7 @@ main {
                     position: relative;
                     width: 400px;
                     height: 320px;
-                    background: #fff;
+                    background: var(--point-bgc);
                     border-radius: 160px 160px 0 160px;
                     overflow: hidden;
 
@@ -100,7 +102,8 @@ main {
 }
 }
 
-section.card-layout {
+section.index-layout {
+    padding: 128px 32px;
     position: relative;
 
     &:before {
@@ -116,7 +119,12 @@ section.card-layout {
     }
 
     .section-inner {
+        gap: 256px !important;
+
+
         .inner-container {
+
+            /* 캠핑장 시설 */
             .card-list {
                 display: flex;
                 gap: 16px;
@@ -124,6 +132,7 @@ section.card-layout {
                 li {
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     gap: 16px;
 
                     .card-img {
@@ -159,6 +168,8 @@ section.card-layout {
                         }
                     }
 
+                    
+
                     .card-info {
                         display: flex;
                         flex-direction: column;
@@ -168,24 +179,72 @@ section.card-layout {
                         margin: 0 auto;
 
                         span {
-                            font: bold 20px/1.5 "Noto Sans KR";
-                            color: #222;
+                            font: bold 1.125rem/1.5 "Noto Sans KR";
+                            color: var(--general-text-color);
                         }
                         p {
-                            font: normal 16px/1.5 "Noto Sans KR";
-                            color: #999;
+                            font: normal 1rem/1.5 "Noto Sans KR";
+                            color: var(--sub-text-color-999);
                         }
                     }
+                    
                 }
-            }
 
+                &.rule-list{
+                    border-radius: 16px;
+                    
+                    li{
+                        border-radius: 16px;
+                        box-shadow: var(--general-box-shadow);
+                        background-color: var(--point-bgc);
+                        width: 100%;
+                        transition: transform 0.3s ease;
+
+                        a {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 32px;
+                            gap: 16px;
+                        }
+                    }
+
+                    &:hover {
+                        li {
+
+                            &:not(:hover) {
+                                background-color: #f9f9f9;
+                                transform: scale(0.975);
+                            }
+
+                            &:hover {
+                                .rule-icon{
+                                    transform: scale(1.125);
+                                }
+                            }
+                        }
+                    }
+
+                    .rule-icon{
+                        padding: 16px;
+                        width: fit-content;
+                        border-radius: 50%;
+                        background-color: var(--primary-color);
+                        transition: transform 0.3s ease;
+                    }
+                }
+
+                
+            }
             .moreview {
                 display: flex;
                 justify-content: center;
                 /* margin-top: 16px; */
 
                 .moreview-link {
-                    background-color: #c1dcdc;
+                    background-color: var(--primary-color);
                     border-radius: 8px;
                     padding: 16px 24px;
                     display: flex;
@@ -193,14 +252,94 @@ section.card-layout {
                     justify-content: center;
                     gap: 8px;
                     color: #fff;
-                    font-size: 18px;
+                    font-size: 1rem;
                     font-weight: 600;
 
                     &:hover {
-                        background-color: #9ec7c7;
+                        background-color: var(--primary-color-hover);
                         transition: background-color 0.3s;
                     }
 
+                    i{
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                }
+            }
+
+            /* 문구 */
+            &.phrase-layout{
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                background-color: var(--point-bgc);
+                padding: 32px;
+                border-radius: 16px;
+                box-shadow: var(--general-box-shadow);
+                /* font-family: 'Nanum Myeongjo', serif; */
+                font-family: "Cafe24Oneprettynight", sans-serif;
+
+                > div{
+                    width: calc(50% - 8px);
+                }
+
+                .phrase-img{
+                    overflow: hidden;
+                    border-radius: 8px;
+                    height: 320px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .phrase-desc{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 32px;
+                    line-height: 1.5;
+
+                    .phrase-title{
+                        font-size: 1.125rem;
+                        /* font-weight: 700; */
+                        color: var(--general-text-color);
+                    }
+
+                    .phrase-slogan{
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        color: var(--general-text-color);
+                        justify-content: flex-start;
+                    }
+
+                    hr{
+                        width: 64px;
+                    }
+
+                    .phrase-desc{
+                        font-size: 0.875rem;
+                        color: var(--general-text-color);
+                    }
+
+                }
+            }
+
+            &.map-layout{
+
+                .map-wrap{
+                    overflow: hidden;
+                    border-radius: 16px;
+                    box-shadow: var(--general-box-shadow);
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
         }

@@ -1,5 +1,28 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --primary-color: #C1DCDC;
+    --primary-color-hover: #9ec7c7;
+    --general-bgc: #f9f9f9;
+    --point-bgc: #fff;
+    --general-text-color: #222;
+    --sub-text-color-666: #666;
+    --sub-text-color-999: #999;
+    --general-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --common-font: 'Montserrat', sans-serif;
+    --general-font: 'Noto Sans KR', sans-serif;
+    --accent-font: 'Cafe24Oneprettynight', sans-serif;
+}
+
+
+
 button {
     all: unset;
     pointer-events: auto;
