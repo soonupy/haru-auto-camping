@@ -22,7 +22,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff">
 
     <!-- Reset CSS and Custom Styles -->
     <link rel="stylesheet" href="css/reset.css">
@@ -38,6 +37,25 @@
     <div class="wrap">
         <header id="header-wrap">
         </header>
+        <div id="popup" class="popup">
+            <div class="dialog-inner">
+                    <div class="popup-img">
+                        <img src="images/building-5084075_1920.jpg" alt="popup-img">
+                    </div>
+                        <div class="close-btn-wrap">
+                            <button class="detail-btn" type="button">
+                                상세보기
+                            </button>
+                            <div class="no-show-wrap">
+                                <label class="no-show-24hour">
+                                    <input type="checkbox" id="no-show-today">
+                                    24시간 동안 보지 않기
+                                </label>
+                                <button class="close-btn">닫기</button>
+                            </div>
+                        </div>
+            </div>
+        </div>
         <main class="banner-wrap">
             <div class="main-inner home-banner">
                 <article class="inner-container">
@@ -45,11 +63,12 @@
                         HARU CAMPING
                         <p class="banner-desc">HaruCamping에서 머무는 하루가<br>힐링의 순간이 되도록 정성을 다하겠습니다.</p>
                     </h2>
-                    <div class="reserve-btn">
-                        <a href="reservation.html">
-                            예약하러 가기
+                        <a class="reserve-btn" href="reservation.html">
+                            실시간 예약
+                            <i>
+                                <img src="images/reserve-icon.svg" alt="arrow-right">
+                            </i>
                         </a>
-                    </div>
                     <div class="tent-content">
                         <i class="tent-arrow-top">
                             <img src="images/spring_arrow-top.svg" alt="텐트">
@@ -88,8 +107,8 @@
                                     <img src="images/Mart.png" alt="매점 내부">
                                 </a>
                                 <div class="card-info">
-                                    <span>매점</span>
-                                    <p>Mart</p>
+                                    <span>편의시설</span>
+                                    <p>Amenities</p>
                                 </div>
                             </li>
                             <li class="facility-card">
@@ -97,8 +116,8 @@
                                     <img src="images/Mart.png" alt="매점 내부">
                                 </a>
                                 <div class="card-info">
-                                    <span>매점</span>
-                                    <p>Mart</p>
+                                    <span>산책로/포토존</span>
+                                    <p>Rest Area</p>
                                 </div>
                             </li>
                         </ul>
@@ -173,8 +192,11 @@
                         <p class="category-title-en">Layout Map</p>
                     </h2>
                     <div class="map-wrap">
-                        <img src="images/camping_map.svg" alt="캠핑장 배치도">
-                    </div>
+                            <a class="view-detail" href="map.html">View detail
+                                    <i><img src="images/chevron-right.svg" alt="arrow-right"></i>
+                            </a>
+                            <div class="map"><img src="images/camping_map.svg" alt="캠핑장 배치도"></div>
+                        </div>
                 </article>
             </div>
         </section>
