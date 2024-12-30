@@ -11,22 +11,22 @@
 
     .dialog-inner{
         position: sticky;
-        padding: 16px;
+        padding: 8px;
         background-color: #fff;
         width: 100%;
         max-width: 480px;
-        border-radius: 16px;
+        border-radius: 8px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 16px;
+        gap: 8px;
 
         .popup-img{
             width: 100%;
             height: 100%;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 4px;
         }
 
         .close-btn-wrap{
@@ -51,18 +51,34 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding-inline: 8px;
-                gap: 16px;
+                /* padding-inline: 8px; */
+                gap: 8px;
                 width: 100%;
+                padding: 8px 0 0 8px;
+                border-top: 1px solid #efefef;
 
                 .no-show-24hour{
                     display: flex;
                     align-items: center;
                     gap: 8px;
                     font-size: 14px;
+
+                    &:hover{
+                        input{
+                            cursor: pointer;
+                        }
+                    }
                 }
 
                 .close-btn{
+                    /* width: 100%; */
+                /* flex-grow: 1; */
+                text-align: center;
+                padding: 8px 16px;
+                border-radius: 4px;
+                background: var(--primary-color);
+                color: #fff;
+                font-size: 16px;
                 }
             }
         }
