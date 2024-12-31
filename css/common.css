@@ -157,7 +157,7 @@
     }
 
     .header-right {
-        display: flex;
+        display: none;
         align-items: center;
         gap: 24px;
 
@@ -314,6 +314,42 @@
 
             .header-nav{
                 display: none;
+            }
+
+            .header-right{
+                display: flex;
+                position: relative;
+                .mobile-menu{
+
+                    .menu-list{
+                        position: absolute;
+                        padding: 8px;
+                        background-color: #fff;
+                        box-shadow: var(--general-box-shadow);
+                        border-radius: 8px;
+                        top: 54px;
+                        right: -16px;
+                        display: flex;
+                        flex-direction: column;
+                        /* gap: 8px; */
+
+                        li{
+                            width: 100%;
+
+                            a{
+                                text-wrap: nowrap;
+                                justify-content: flex-start;
+                                width: 100%;
+                                padding: 8px;
+                                border-radius: 4px;
+
+                                &:hover{
+                                    background-color: #efefef;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

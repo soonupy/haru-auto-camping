@@ -653,6 +653,20 @@ section.index-layout {
                         }
                     }
                 }
+
+                &.map-layout{
+                    .map-wrap{
+                        gap: 8px;
+
+                        .view-detail{
+                            font-size: 1rem;
+                        }
+
+                        .map{
+                            border-radius: 8px;
+                        }
+                    }
+                }
             }
         }
     }
