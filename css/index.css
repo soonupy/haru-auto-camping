@@ -3,18 +3,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 99;
-    padding: 32px;
+    padding: 16px;
 
     .dialog-inner{
         position: sticky;
         padding: 8px;
         background-color: #fff;
+    box-shadow: var(--general-box-shadow);
+
         width: 100%;
-        max-width: 480px;
+        max-width: 320px;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
@@ -79,6 +81,11 @@
                 background: var(--primary-color);
                 color: #fff;
                 font-size: 16px;
+
+                &:hover{
+                    background-color: var(--primary-color-hover);
+                    transition: background-color 0.3s ease;
+                }
                 }
             }
         }
@@ -204,7 +211,7 @@ main {
 }
 
 section.index-layout {
-    padding: 128px 32px;
+    padding: 64px 32px;
     position: relative;
 
     &:before {
@@ -230,6 +237,7 @@ section.index-layout {
                 gap: 16px;
 
                 li {
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -240,10 +248,14 @@ section.index-layout {
                         border-radius: 16px;
                         overflow: hidden;
                         max-height: 240px;
+                        width: 100%;
+                        height: 100%;
 
                         img {
                             transition: all 0.25s;
-
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
                         }
 
                         &::after {
