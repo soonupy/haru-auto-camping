@@ -290,10 +290,27 @@
 }
 }
 
-@media (max-width: 812px) {
-    #header {
+@media (max-width: 768px) {
+    #header-wrap {
+        padding: 0 16px;
+        top: 16px;
+        margin-top: 16px;
         .header_inner {
-            padding: 0 24px;
+            padding: 0 16px;
+            height: 64px;
+            border-radius: 8px;
+
+            .header-left{
+                .header-logo{
+                    a{
+                        min-width: 64px;
+                    }
+                }
+            }
+
+            .header-nav{
+                display: none;
+            }
         }
     }
 }

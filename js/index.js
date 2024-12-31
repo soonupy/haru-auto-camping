@@ -21,6 +21,7 @@
         // // 페이지 로드 시 팝업 상태 확인
         // checkPopupStatus();
     
+        
         // 닫기 버튼 클릭 이벤트
         closeBtn.addEventListener('click', function() {
             if (noShowCheckbox.checked) {
