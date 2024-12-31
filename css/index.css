@@ -558,16 +558,98 @@ section.index-layout {
             .inner-container{
                 gap: 32px;
 
+                .moreview{
+                    .moreview-link{
+                        padding: 12px 20px;
+
+                        i{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+
                 .card-list{
                     /* flex-direction: column; */
                     flex-wrap: wrap;
+                    gap: 16px;
 
                     li{
                         width: calc((100% - 16px) / 2);
 
+                        .card-info{
+                            span{
+                                font-size: 1rem;
+                                line-height: 1.25;
+                            }
+                            p{
+                                font-size: 0.875rem;
+                            }
+                        }
+
                         .card-img{
                             border-radius: 8px;
                             max-height: 160px;
+                        }
+                    }
+
+                    &.rule-list{
+                        li{
+                            border-radius: 8px;
+                            a{
+                                flex-direction: row;
+                                padding: 16px;
+
+                                .rule-icon{
+                                    box-sizing: border-box;
+
+                                    img{
+                                        width: 32px;
+                                        height: 32px;
+                                    }
+                                }
+                                .card-info{
+                                    align-items: flex-start;
+                                    text-align: left;
+                                    margin-inline: 0 auto;
+                                    gap: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.phrase-layout{
+                    flex-direction: column;
+                    padding: 16px;
+                    border-radius: 8px;
+
+                    > div{
+                        width: 100%;
+                    }
+
+                    .phrase-img{
+                        height: 160px;
+                        border-radius: 4px;
+                    }
+
+                    .phrase-desc{
+                        gap: 16px;
+
+                        .phrase-title{
+                            font-size: 1rem;
+                        }
+
+                        .phrase-slogan{
+                            font-size: 1.125rem;
+                        }
+
+                        .phrase-desc{
+                            font-size: 0.875rem;
+
+                            br{
+                                display: none;
+                            }
                         }
                     }
                 }

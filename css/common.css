@@ -268,7 +268,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
-                    font-size: 16px;
+                    font-size: 1rem;
 
                     b {
                         color: var(--general-text-color);
@@ -291,6 +291,10 @@
 }
 
 @media (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+
     #header-wrap {
         padding: 0 16px;
         top: 16px;
@@ -310,6 +314,37 @@
 
             .header-nav{
                 display: none;
+            }
+        }
+    }
+
+    #footer-wrap{
+        padding: 32px 16px;
+
+        .footer-inner{
+            gap: 16px;
+
+            .footer-desc{
+                flex-direction: column;
+                gap: 32px;
+
+                .footer-left{
+                    gap: 16px;
+                    .faq-list{
+                       gap: 16px;
+
+                       li{
+
+                        a{
+                            line-height: 1.25;
+                        }
+                        &:not(:last-child)::after{
+                            height: 1rem;
+                            right: -8px;
+                           }
+                       }
+                    }
+                }
             }
         }
     }
