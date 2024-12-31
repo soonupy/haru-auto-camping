@@ -55,6 +55,8 @@ body, html {
 	line-height: inherit;
     background-color: #f9f9f9;
     height: 100%;
+    color-scheme: light;
+    forced-color-adjust: none;
 
     overflow-y: auto;
     /* height: 100%; */
