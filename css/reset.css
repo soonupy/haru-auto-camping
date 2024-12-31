@@ -53,10 +53,10 @@ img, svg {
 body, html {
 	font-family: /*"Roboto",*/ /*"Open Sans",*/ /*"Noto Sans KR",*/ "Pretendard","Montserrat", sans-serif;
 	line-height: inherit;
-    background-color: #f9f9f9;
     height: 100%;
-    color-scheme: light;
-    forced-color-adjust: none;
+    background-color: #f9f9f9;
+    color-scheme: light !important;
+    forced-color-adjust: none !important;
 
     overflow-y: auto;
     /* height: 100%; */
