@@ -493,6 +493,12 @@ section.index-layout {
 }
 
 @media (max-width: 768px) {
+
+    #popup{
+        .dialog-inner{
+            max-width: 100%;
+        }
+    }
     main{
         padding: 16px;
 

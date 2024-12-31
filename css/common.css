@@ -336,15 +336,31 @@
                         li{
                             width: 100%;
 
-                            a{
+                            .menu-category{
                                 text-wrap: nowrap;
                                 justify-content: flex-start;
                                 width: 100%;
-                                padding: 8px;
+                                padding: 8px 32px 8px 8px;
                                 border-radius: 4px;
+                                font-size: 16px;
+                                line-height: 1.25;
 
                                 &:hover{
                                     background-color: #efefef;
+                                }
+
+                            }
+                            .menu-list-2depth{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                gap: 4px;
+
+                                a{
+                                padding: 8px 32px 8px 8px;
+                                text-wrap: nowrap;
+
                                 }
                             }
                         }
