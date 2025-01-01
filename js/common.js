@@ -15,13 +15,3 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('푸터를 로드하는 중 오류가 발생했습니다:', error));
 });
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuCategories = document.querySelectorAll('.menu-category');
-    menuCategories.forEach(category => {
-        category.addEventListener('click', function() {
-            this.classList.toggle('active');
-        });
-    });
-});

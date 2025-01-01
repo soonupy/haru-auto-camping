@@ -84,10 +84,15 @@ body, html {
             background-color: #ccc;
         }
     }
-    
+}
 
-    
-  /* height: 100dvh; */
+@media (max-width: 768px) {
+    body, html {
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+    }
 }
 
 .wrap {
