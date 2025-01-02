@@ -317,6 +317,12 @@
                 display: flex;
                 position: relative;
                 .mobile-menu {
+                    .menu-btn {
+                        background: url("../images/tab_menu.svg") center / contain no-repeat;
+                        &.active {
+                            background: url("../images/close-icon.svg") center / contain no-repeat;
+                        }
+                    }
 
                     .menu-list {
                         position: absolute;
@@ -326,8 +332,13 @@
                         border-radius: 8px;
                         top: 54px;
                         right: -16px;
-                        display: flex;
+                        display: none;
                         flex-direction: column;
+                        width: calc(100vw - 32px);
+
+                        &.active {
+                            display: flex;
+                        }
 
                         li {
                             width: 100%;
@@ -343,6 +354,12 @@
                                 font-size: 16px;
                                 /* line-height: 1.5; */
 
+                                
+
+                                &.active {
+                                    background-color: #efefef;
+                                }
+
                                 .accordion-arrow {
                                     width: 18px;
                                     height: 18px;
@@ -354,7 +371,7 @@
                                     transition: transform 0.3s ease;
 
                                     &.active {
-                                        transform: rotate(0deg);
+                                        transform: rotate(-90deg);
                                     }
                                 }
 
@@ -364,12 +381,13 @@
 
                             }
                             .menu-list-2depth {
-                                display: flex;
+                                display: none;
                                 flex-direction: column;
                                 justify-content: flex-start;
                                 align-items: flex-start;
                                 gap: 4px;
                                 width: calc(100vw - 48px);
+                                transition: transform 0.3s ease;
 
                                 a {
                                     display: flex;
@@ -377,8 +395,10 @@
                                     padding: 8px 8px 8px 32px;
                                     width: 100%;
                                     text-wrap: nowrap;
-                                    /* background-color: #f90; */
+                                }
 
+                                &.active {
+                                    display: flex;
                                 }
                             }
                         }
