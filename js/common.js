@@ -1,5 +1,5 @@
 $(function() {
-    $.get('component/header.html', function(data) {
+    $.get('../component/header.html', function(data) {
         $('#header-wrap').html(data);
 
         $('.menu-btn').on('click', function(e) {
@@ -19,7 +19,7 @@ $(function() {
 });
 
 $(document).ready(function() {
-    $.get('component/footer.html', function(data) {
+    $.get('../component/footer.html', function(data) {
         $('#footer-wrap').html(data);
     })
 });
