@@ -5,7 +5,6 @@
 // });
 
 
-
 // 카테고리 선택 함수
 // document.addEventListener('DOMContentLoaded', () => {
 //     const sections = document.querySelectorAll('.content-wrap');
