@@ -1,5 +1,8 @@
 $(function() {
-    $.get('../component/header.html', function(data) {
+    // 현재 페이지의 경로에 따라 상대 경로 계산
+    var headerPath = window.location.pathname.includes('/pages/') ? '../component/header.html' : 'component/header.html';
+    
+    $.get(headerPath, function(data) {
         $('#header-wrap').html(data);
 
         $('.menu-btn').on('click', function(e) {
@@ -19,9 +22,12 @@ $(function() {
 });
 
 $(document).ready(function() {
-    $.get('../component/footer.html', function(data) {
+    // 현재 페이지의 경로에 따라 상대 경로 계산
+    var footerPath = window.location.pathname.includes('/pages/') ? '../component/footer.html' : 'component/footer.html';
+    
+    $.get(footerPath, function(data) {
         $('#footer-wrap').html(data);
-    })
+    });
 });
 
 
