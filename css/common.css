@@ -318,9 +318,9 @@
                 position: relative;
                 .mobile-menu {
                     .menu-btn {
-                        background: url("../images/tab_menu.svg") center / contain no-repeat;
+                        background: url("/images/tab_menu.svg") center / contain no-repeat;
                         &.active {
-                            background: url("../images/close-icon.svg") center / contain no-repeat;
+                            background: url("/images/close-icon.svg") center / contain no-repeat;
                         }
                     }
 
@@ -369,7 +369,7 @@
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    background: url("../images/chevron-right.svg") center / contain no-repeat;
+                                    background: url("/images/chevron-right.svg") center / contain no-repeat;
                                     transform: rotate(90deg);
                                     transition: transform 0.3s ease;
 

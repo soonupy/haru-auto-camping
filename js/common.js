@@ -1,5 +1,5 @@
 $(function() {
-    $.get('component/header.html', function(data) {
+    $.get('/component/header.html', function(data) {
         $('#header-wrap').html(data);
 
         $('.menu-btn').on('click', function(e) {
