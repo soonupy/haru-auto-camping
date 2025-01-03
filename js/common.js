@@ -1,3 +1,24 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 현재 페이지 URL 가져오기
+    const currentPath = window.location.pathname;
+    
+    // index.html이 아닌 경우에만 경로 수정
+    if (!currentPath.includes('index.html')) {
+        // 모든 href와 src 속성을 가진 요소 선택
+        const links = document.querySelectorAll('[href^="/"], [src^="/"]');
+        
+        links.forEach(element => {
+            if (element.hasAttribute('href')) {
+                element.href = '..' + element.getAttribute('href');
+            }
+            if (element.hasAttribute('src')) {
+                element.src = '..' + element.getAttribute('src');
+            }
+        });
+    }
+});
+
 $(function() {
     $.get('../component/header.html', function(data) {
         $('#header-wrap').html(data);
@@ -23,6 +44,7 @@ $(document).ready(function() {
         $('#footer-wrap').html(data);
     })
 });
+
 
 
 
