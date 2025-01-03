@@ -12,8 +12,8 @@ $.get('../component/header.html', function(data) {
         
                     $('.menu-category').not(this).siblings('.menu-list-2depth').removeClass('active').parent().find('.accordion-arrow').removeClass('active');
                     $(this).find('.accordion-arrow').toggleClass('active');
-                    $(this).parent().find('.menu-list-2depth').toggleClass('active');
-                });
+        $(this).parent().find('.menu-list-2depth').toggleClass('active');
+    });
 });
 
 $.get('../component/footer.html', function(data) {

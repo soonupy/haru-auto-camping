@@ -504,7 +504,7 @@ section.index-layout {
         padding: 16px;
 
         .home-banner{
-            padding: 16px;
+            padding: 32px !important; 
             border-radius: 8px;
             height: fit-content;
 
