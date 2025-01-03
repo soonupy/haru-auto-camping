@@ -1,25 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // 현재 페이지 URL 가져오기
-    const currentPath = window.location.pathname;
-    
-    // index.html이 아닌 경우에만 경로 수정
-    if (!currentPath.includes('index.html')) {
-        // body 내부의 요소들만 선택하도록 수정
-        const links = document.body.querySelectorAll('[href^="/"], [src^="/"]');
-        
-        links.forEach(element => {
-            if (element.hasAttribute('href')) {
-                element.href = '.' + element.getAttribute('href');
-            }
-            if (element.hasAttribute('src')) {
-                element.src = '.' + element.getAttribute('src');
-            }
-        });
-    }
-});
-
 $(function() {
-    $.get('../component/header.html', function(data) {
+    // 현재 페이지가 index.html인지 확인
+    const isIndexPage = window.location.pathname === '/' || 
+                       window.location.pathname.includes('index.html');
+    const componentPath = isIndexPage ? 'component/' : '../component/';
+
+    $.get(componentPath + 'header.html', function(data) {
         $('#header-wrap').html(data);
 
         $('.menu-btn').on('click', function(e) {
@@ -39,7 +24,11 @@ $(function() {
 });
 
 $(document).ready(function() {
-    $.get('component/footer.html', function(data) {
+    const isIndexPage = window.location.pathname === '/' || 
+                       window.location.pathname.includes('index.html');
+    const componentPath = isIndexPage ? 'component/' : '../component/';
+
+    $.get(componentPath + 'footer.html', function(data) {
         $('#footer-wrap').html(data);
     })
 });
