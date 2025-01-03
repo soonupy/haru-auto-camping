@@ -1,12 +1,11 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // 현재 페이지 URL 가져오기
     const currentPath = window.location.pathname;
     
     // index.html이 아닌 경우에만 경로 수정
     if (!currentPath.includes('index.html')) {
-        // 모든 href와 src 속성을 가진 요소 선택
-        const links = document.querySelectorAll('[href^="/"], [src^="/"]');
+        // body 내부의 요소들만 선택하도록 수정
+        const links = document.body.querySelectorAll('[href^="/"], [src^="/"]');
         
         links.forEach(element => {
             if (element.hasAttribute('href')) {
