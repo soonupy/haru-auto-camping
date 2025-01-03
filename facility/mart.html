@@ -30,12 +30,19 @@
 
     <script src="../js/common.js"></script>
     <script src="../js/pages.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#header-wrap").load("../component/header.html");
+            $("#footer-wrap").load("../component/footer.html");
+        });
+    </script>
     
 </head>
 
 <body>
     <div class="wrap">
         <header id="header-wrap">
+
         </header>
         <main class="banner-wrap">
             <div class="main-inner mart-banner">
