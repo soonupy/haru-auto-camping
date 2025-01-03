@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         links.forEach(element => {
             if (element.hasAttribute('href')) {
-                element.href = '..' + element.getAttribute('href');
+                element.href = '.' + element.getAttribute('href');
             }
             if (element.hasAttribute('src')) {
-                element.src = '..' + element.getAttribute('src');
+                element.src = '.' + element.getAttribute('src');
             }
         });
     }
