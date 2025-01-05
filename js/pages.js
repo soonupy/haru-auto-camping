@@ -1,82 +1,35 @@
-$.get('../component/header.html', function(data) {
-    $('#header-wrap').html(data);
+$(function() {
+    // 현재 페이지의 경로를 확인하여 컴포넌트 경로 설정
+    const currentPath = window.location.pathname;
+    const isSubPage = currentPath.split('/').length > 2;
+    const componentPath = isSubPage ? '../component/' : './component/';
 
-    $('.menu-btn').on('click', function(e) {
-                    e.preventDefault();
-                    $(this).toggleClass('active');
-                    $(this).parent().find('.menu-list').toggleClass('active');
-                });
+    // 헤더 로드
+    $.get(componentPath + 'header.html', function(data) {
+        $('#header-wrap').html(data);
+
+        // 메뉴 버튼 클릭 이벤트
+        $('.menu-btn').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).parent().find('.menu-list').toggleClass('active');
+        });
         
-                $('.menu-category').on('click', function(e) {
-                    e.preventDefault();
-        
-                    $('.menu-category').not(this).siblings('.menu-list-2depth').removeClass('active').parent().find('.accordion-arrow').removeClass('active');
-                    $(this).find('.accordion-arrow').toggleClass('active');
-        $(this).parent().find('.menu-list-2depth').toggleClass('active');
+        // 메뉴 카테고리 클릭 이벤트
+        $('.menu-category').on('click', function(e) {
+            e.preventDefault();
+            $('.menu-category').not(this).siblings('.menu-list-2depth').removeClass('active')
+                .parent().find('.accordion-arrow').removeClass('active');
+            $(this).find('.accordion-arrow').toggleClass('active');
+            $(this).parent().find('.menu-list-2depth').toggleClass('active');
+        });
+    });
+
+    // 푸터 로드
+    $.get(componentPath + 'footer.html', function(data) {
+        $('#footer-wrap').html(data);
     });
 });
-
-$.get('../component/footer.html', function(data) {
-    $('#footer-wrap').html(data);
-});
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     loadComponent('#header-wrap', '../component/header.html');
-//     loadComponent('#footer-wrap', '../component/footer.html');
-//     loadComponent('#sidenav-wrap', '../component/sideNav.html');
-// });
-
-
-// 카테고리 선택 함수
-// document.addEventListener('DOMContentLoaded', () => {
-//     const sections = document.querySelectorAll('.content-wrap');
-//     sections.forEach(section => section.style.display = 'none');
-    
-//     document.querySelector('.category-1').style.display = 'block';
-//     document.querySelector('#category-1').checked = true;
-    
-//     document.querySelectorAll('input[name="category"]').forEach(radio => {
-//         radio.addEventListener('change', e => {
-//             sections.forEach(section => section.style.display = 'none');
-//             document.querySelector(`.category-${e.target.id.split('-')[1]}`).style.display = 'block';
-//         });
-//     });
-// });
-
-// $(function() {
-//     // 현재 페이지가 index.html인지 확인
-//     const isIndexPage = window.location.pathname === '/' || 
-//                        window.location.pathname.includes('index.html');
-//     const componentPath = isIndexPage ? 'component/' : '../component/';
-
-//     $.get(componentPath + 'header.html', function(data) {
-//         $('#header-wrap').html(data);
-
-//         $('.menu-btn').on('click', function(e) {
-//             e.preventDefault();
-//             $(this).toggleClass('active');
-//             $(this).parent().find('.menu-list').toggleClass('active');
-//         });
-
-//         $('.menu-category').on('click', function(e) {
-//             e.preventDefault();
-
-//             $('.menu-category').not(this).siblings('.menu-list-2depth').removeClass('active').parent().find('.accordion-arrow').removeClass('active');
-//             $(this).find('.accordion-arrow').toggleClass('active');
-//             $(this).parent().find('.menu-list-2depth').toggleClass('active');
-//         });
-//     });
-// });
-
-// $(document).ready(function() {
-//     const isIndexPage = window.location.pathname === '/' || 
-//                        window.location.pathname.includes('index.html');
-//     const componentPath = isIndexPage ? 'component/' : '../component/';
-
-//     $.get(componentPath + 'footer.html', function(data) {
-//         $('#footer-wrap').html(data);
-//     })
-// });
 
 
 
