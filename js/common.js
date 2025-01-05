@@ -21,15 +21,23 @@
 // });
 
 $(function() {
+    // GitHub Pages 여부 확인
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    const repoName = '/haru-auto-camping';
+    
     // 현재 페이지의 경로를 확인하여 컴포넌트 경로 설정
     const currentPath = window.location.pathname;
     const pathSegments = currentPath.split('/');
     const isSubPage = pathSegments.length > 2 && pathSegments[pathSegments.length - 1] !== '';
     
-    // 기본 경로를 ./ 로 설정하고, 서브페이지인 경우에만 ../로 변경
-    let componentPath = './component/';
-    if (isSubPage) {
-        componentPath = '../component/';
+    // GitHub Pages일 때와 로컬 환경일 때의 경로 설정
+    let componentPath;
+    if (isGitHubPages) {
+        componentPath = isSubPage ? 
+            `${repoName}/component/` : 
+            `${repoName}/component/`;
+    } else {
+        componentPath = isSubPage ? '../component/' : './component/';
     }
 
     // 헤더 로드
