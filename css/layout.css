@@ -161,12 +161,12 @@ section {
         
         &.comming-soon{
             position: relative;
-            /* opacity: 0.5; */
             color: rgba(0, 0, 0, 0.2);
             border: none;
+            pointer-events:none;
+            user-select: none;
 
             &:hover{
-                cursor: not-allowed;
                 background-color: inherit;
             }
 
@@ -190,6 +190,7 @@ section {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
             }
         }
 
