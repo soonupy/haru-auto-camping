@@ -139,7 +139,7 @@ main {
                 }
             }
 
-            .reserve-btn {
+            /* .reserve-btn {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -160,11 +160,10 @@ main {
                 }
 
                 &:hover{
-                    /* background-color: var(--point-bgc-hover); */
                     box-shadow: var(--general-box-shadow);
                     transition: background-color 0.3s ease;
                 }
-            }
+            } */
 
             .tent-content {
                 position: absolute;
@@ -550,10 +549,10 @@ section.index-layout {
 
                 }
 
-                .reserve-btn{
+                /* .reserve-btn{
                     width: 100%;
                     font-size: 1rem;
-                }
+                } */
             }
         }
     }
