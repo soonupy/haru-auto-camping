@@ -507,6 +507,7 @@ section.index-layout {
             padding: 32px !important; 
             border-radius: 8px;
             height: fit-content;
+            height: fit-content !important;
 
             .inner-container{
                 gap: 16px;
