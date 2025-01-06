@@ -46,12 +46,6 @@ $(function() {
     });
 });
 
-function handleClick(radio, url) {
-    radio.checked = true;
-    setTimeout(() => {
-        location.href = url;
-    }, 100);
-}
 
 
 // document.addEventListener('DOMContentLoaded', function() {

@@ -55,7 +55,8 @@
 //     });
 // });
 $(document).ready(function() {
-    $('.category-list').load('../facility/facility-category.html');
+    // 절대 경로로 변경
+    $('.category-list').load('/facility/facility-category.html');
 });
 
 window.onload = function() {
@@ -68,11 +69,14 @@ window.onload = function() {
 
 // 경로에 따른 카테고리 ID 반환
 function getCategoryIdFromPath(path) {
-    if (path.includes('mart')) return 'category-1';
-    if (path.includes('amenitie')) return 'category-2';
-    if (path.includes('rest-area')) return 'category-3';
-    if (path.includes('ev-charging')) return 'category-6';
-    if (path.includes('pool')) return 'category-5';
-    if (path.includes('cafe')) return 'category-4';
+    // 경로 체크 시 전체 URL이 아닌 파일명만 확인하도록 수정
+    const fileName = path.split('/').pop();
+    
+    if (fileName.includes('mart')) return 'category-1';
+    if (fileName.includes('amenitie')) return 'category-2';
+    if (fileName.includes('rest-area')) return 'category-3';
+    if (fileName.includes('ev-charging')) return 'category-6';
+    if (fileName.includes('pool')) return 'category-5';
+    if (fileName.includes('cafe')) return 'category-4';
     return null;
 }
