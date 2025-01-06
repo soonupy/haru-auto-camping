@@ -667,6 +667,12 @@ section.index-layout {
 
                         .view-detail{
                             font-size: 1rem;
+                            gap: 4px;
+
+                            i{
+                                width: 14px;
+                                height: 14px;
+                            }
                         }
 
                         .map{
