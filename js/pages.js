@@ -56,7 +56,7 @@
 // });
 $(document).ready(function() {
     // 절대 경로로 변경
-    $('.category-list').load('/facility/facility-category.html');
+    $('.category-list').load('../facility/facility-category.html');
 });
 
 window.onload = function() {
