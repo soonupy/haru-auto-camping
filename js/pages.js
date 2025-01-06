@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const categories = [
-        { id: 1, name: '매점', enName: 'Mart', link: '../facility/mart.html', isComingSoon: false },
-        { id: 2, name: '편의시설', enName: 'Amenities', link: '../facility/amenities.html', isComingSoon: false },
-        { id: 3, name: '산책로/포토존', enName: 'Rest Area', link: '../facility/rest.html', isComingSoon: false },
-        { id: 6, name: '전기차 충전소', enName: 'EV Charging', link: '../facility/charging.html', isComingSoon: false },
-        { id: 5, name: '수영장', enName: 'Pool', link: '../facility/pool.html', isComingSoon: true },
-        { id: 4, name: '카페', enName: 'Cafe', link: '../facility/cafe.html', isComingSoon: true }
+        { id: 1, name: '매점', enName: 'Mart', link: './mart.html', isComingSoon: false },
+        { id: 2, name: '편의시설', enName: 'Amenities', link: './amenities.html', isComingSoon: false },
+        { id: 3, name: '산책로/포토존', enName: 'Rest Area', link: './rest.html', isComingSoon: false },
+        { id: 6, name: '전기차 충전소', enName: 'EV Charging', link: './charging.html', isComingSoon: false },
+        { id: 5, name: '수영장', enName: 'Pool', link: './pool.html', isComingSoon: true },
+        { id: 4, name: '카페', enName: 'Cafe', link: './cafe.html', isComingSoon: true }
     ];
 
     const container = document.getElementById('categoryContainer');
