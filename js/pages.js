@@ -9,24 +9,47 @@ $(document).ready(function() {
             const originalPath = $(this).attr('onclick').match(/location\.href='([^']+)'/)[1];
             const cleanPath = originalPath.replace('haru-auto-camping/', '');
             
-            // onclick 속성은 유지하면서 추가 이벤트 바인딩
-            $(this).attr('onclick', `this.checked=true`)
-                  .on('click touch', function(e) {
-                      e.preventDefault(); // 기본 이벤트 방지
-                      $(this).prop('checked', true);
-                      window.location.href = basePath + cleanPath;
-                  });
+            // 모든 플랫폼 호환성을 위한 이벤트 처리
+            $(this)
+                .attr('onclick', 'return false')  // 기존 onclick 비활성화
+                .on('touchstart touchend mousedown click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const $this = $(this);
+                    
+                    // 중복 실행 방지를 위한 플래그
+                    if ($this.data('processing')) return;
+                    $this.data('processing', true);
+                    
+                    // 라디오 버튼 상태 변경
+                    $this.prop('checked', true);
+                    
+                    // 약간의 지연 후 페이지 이동
+                    setTimeout(() => {
+                        window.location.href = basePath + cleanPath;
+                        $this.data('processing', false);
+                    }, 50);
+                });
         });
+        
+        // 초기 체크 상태 설정
+        const currentPath = window.location.pathname;
+        const categoryId = getCategoryIdFromPath(currentPath);
+        if (categoryId) {
+            $('#' + categoryId).prop('checked', true);
+        }
     });
 });
 
-window.onload = function() {
+// 페이지 로드 완료 후 추가 체크
+$(window).on('load', function() {
     const currentPath = window.location.pathname;
     const categoryId = getCategoryIdFromPath(currentPath);
     if (categoryId) {
-        document.getElementById(categoryId).checked = true;
+        $('#' + categoryId).prop('checked', true);
     }
-}
+});
 
 // 경로에 따른 카테고리 ID 반환
 function getCategoryIdFromPath(path) {
