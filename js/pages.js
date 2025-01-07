@@ -5,12 +5,17 @@ const basePath = window.location.origin === 'http://127.0.0.1:5500'
 
 $(document).ready(function() {
     $('.category-list').load('./facility/facility-category.html', function() {
-        // HTML이 로드된 후 각 라디오 버튼의 onclick 이벤트 수정
         $('input[type="radio"]').each(function() {
             const originalPath = $(this).attr('onclick').match(/location\.href='([^']+)'/)[1];
-            // haru-auto-camping/를 제거하고 basePath를 추가
             const cleanPath = originalPath.replace('haru-auto-camping/', '');
-            $(this).attr('onclick', `this.checked=true; location.href='${basePath}${cleanPath}'`);
+            
+            // onclick 속성은 유지하면서 추가 이벤트 바인딩
+            $(this).attr('onclick', `this.checked=true`)
+                  .on('click touch', function(e) {
+                      e.preventDefault(); // 기본 이벤트 방지
+                      $(this).prop('checked', true);
+                      window.location.href = basePath + cleanPath;
+                  });
         });
     });
 });
