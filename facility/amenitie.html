@@ -60,8 +60,38 @@
                         캠핑장 시설
                         <p class="category-title-en">Campsite Facilities</p>
                     </h2>
-                    <div class="category-list content-info" id="categoryContainer">
-                        <!-- 카테고리가 여기에 동적으로 추가됩니다 -->
+                    <div class="category-list content-info">
+                        
+                        
+                        <input type="radio" name="category" id="category-1" onclick="window.location.assign('../facility/mart.html#view-category')">
+                        <label for="category-1">매점
+                            <p>Mart</p>
+                        </label>
+
+                        <input type="radio" name="category" id="category-2" checked onclick="window.location.assign('../facility/amenitie.html#view-category')">
+                        <label for="category-2">편의시설
+                            <p>Amenities</p>
+                        </label>
+
+                        <input type="radio" name="category" id="category-3">
+                        <label for="category-3">산책로/포토존
+                            <p>Rest Area</p>
+                        </label>
+
+                        <input type="radio" name="category" id="category-6">
+                        <label for="category-6">전기차 충전소
+                            <p>EV Charging</p>
+                        </label>
+                        
+                        <input type="radio" name="category" id="category-5">
+                        <label for="category-5" class="comming-soon">수영장
+                            <p>Pool</p>
+                        </label>
+                        
+                        <input type="radio" name="category" id="category-4">
+                        <label for="category-4" class="comming-soon">카페
+                            <p>Cafe</p>
+                        </label>
                     </div>
                 </article>
             </div>
@@ -70,7 +100,7 @@
             <div class="section-inner">
 
                 <!-- 캐드 소개 -->
-                <article class="inner-container" role="content info">
+                <article class="inner-container" id="view-category" role="content info">
                     <h3 class="content-title">
                         편의시설
                         <p class="category-title-en">Mart</p>

@@ -1,3 +1,12 @@
+html {
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 144px; */
+}
+
+#view-category {
+    scroll-margin-top: 240px;
+}
+
 #header-wrap {
     position: sticky;
     top: 0;
@@ -287,9 +296,16 @@
     }
 }
 
+
+
+
 @media (max-width: 768px) {
     html {
         font-size: 14px;
+    }
+
+    #view-category {
+        scroll-margin-top: 144px;
     }
 
     #header-wrap {

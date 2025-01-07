@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages.css">
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/pages.js"></script>
@@ -65,12 +66,12 @@
                     <div class="category-list content-info">
                         
                         
-                        <!-- <input type="radio" name="category" id="category-1" checked onclick="location.href='../facility/mart.html'">
+                        <input type="radio" name="category" id="category-1" checked onclick="window.location.assign('../facility/mart.html#view-category')">
                         <label for="category-1">매점
                             <p>Mart</p>
                         </label>
 
-                        <input type="radio" name="category" id="category-2">
+                        <input type="radio" name="category" id="category-2" onclick="window.location.assign('../facility/amenitie.html#view-category')">
                         <label for="category-2">편의시설
                             <p>Amenities</p>
                         </label>
@@ -93,7 +94,7 @@
                         <input type="radio" name="category" id="category-4">
                         <label for="category-4" class="comming-soon">카페
                             <p>Cafe</p>
-                        </label> -->
+                        </label>
                     </div>
                 </article>
             </div>
@@ -102,7 +103,7 @@
             <div class="section-inner">
 
                 <!-- 캐드 소개 -->
-                <article class="inner-container" role="content info">
+                <article class="inner-container" id="view-category" role="content info">
                     <h3 class="content-title">
                         매점
                         <p class="category-title-en">Mart</p>
