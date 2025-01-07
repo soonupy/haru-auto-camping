@@ -1,6 +1,10 @@
 // 전역 변수로 basePath 선언
-const basePath = window.location.origin === 'http://127.0.0.1:5500' 
-    ? 'http://127.0.0.1:5500/' 
+// const basePath = window.location.origin === 'http://127.0.0.1:5500' 
+//     ? 'http://127.0.0.1:5500/' 
+//     : '';
+
+const basePath = window.location.hostname === 'soonupy.github.io' 
+    ? '/haru-auto-camping' 
     : '';
 
 // $(document).ready(function() {
