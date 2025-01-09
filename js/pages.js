@@ -7,6 +7,33 @@ const basePath = window.location.hostname === 'soonupy.github.io'
     ? '/haru-auto-camping' 
     : '';
 
+    $(document).ready(function() {
+        $('#category-1').on('click', function() {
+        $('.content-wrap').hide();
+        $('.category-1').show();
+    });
+    $('#category-2').on('click', function() {
+        $('.content-wrap').hide();
+        $('.category-2').show();
+    });
+    $('#category-3').on('click', function() {
+        $('.content-wrap').hide();
+        $('.category-3').show();
+    });
+    $('#category-4').on('click', function() {
+        $('.content-wrap').hide();
+        $('.category-4').show();
+    });
+    $('#category-5').on('click', function() {
+            $('.content-wrap').hide();
+            $('.category-5').show();
+    });
+    $('#category-6').on('click', function() {
+        $('.content-wrap').hide();
+        $('.category-6').show();
+    });
+});
+
 // $(document).ready(function() {
 //     $('.category-list').load('./facility/facility-category.html', function() {
 //         $('input[type="radio"]').each(function() {
