@@ -34,6 +34,28 @@ const basePath = window.location.hostname === 'soonupy.github.io'
     });
 });
 
+// 카테고리 전환 함수 생성
+function switchCategory(categoryNum) {
+    $('.content-wrap').hide();
+    $(`.category-${categoryNum}`).show();
+}
+
+$(document).ready(function() {
+    // URL 파라미터에서 카테고리 확인
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+    if (category) {
+        switchCategory(category);
+    }
+
+    // 카테고리 클릭 이벤트
+    for (let i = 1; i <= 6; i++) {
+        $(`#category-${i}`).on('click', function() {
+            switchCategory(i);
+        });
+    }
+}); 
+
 // $(document).ready(function() {
 //     $('.category-list').load('./facility/facility-category.html', function() {
 //         $('input[type="radio"]').each(function() {
