@@ -59,6 +59,8 @@ img, svg {
 body, html {
 	font-family: /*"Roboto",*/ /*"Open Sans",*/ /*"Noto Sans KR",*/ "Pretendard","Montserrat", sans-serif;
 	line-height: inherit;
+    scroll-behavior: smooth;
+
     height: 100%;
     background-color: #f9f9f9;
     color-scheme: light !important;
