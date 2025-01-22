@@ -1,60 +1,60 @@
 // 전역 변수로 basePath 선언
-// const basePath = window.location.origin === 'http://127.0.0.1:5500' 
-//     ? 'http://127.0.0.1:5500/' 
-//     : '';
-
-const basePath = window.location.hostname === 'soonupy.github.io' 
-    ? '/haru-auto-camping' 
+const basePath = window.location.origin === 'http://127.0.0.1:5500' 
+    ? 'http://127.0.0.1:5500/' 
     : '';
 
-    $(document).ready(function() {
-        $('#category-1').on('click', function() {
-        $('.content-wrap').hide();
-        $('.category-1').show();
-    });
-    $('#category-2').on('click', function() {
-        $('.content-wrap').hide();
-        $('.category-2').show();
-    });
-    $('#category-3').on('click', function() {
-        $('.content-wrap').hide();
-        $('.category-3').show();
-    });
-    $('#category-4').on('click', function() {
-        $('.content-wrap').hide();
-        $('.category-4').show();
-    });
-    $('#category-5').on('click', function() {
-            $('.content-wrap').hide();
-            $('.category-5').show();
-    });
-    $('#category-6').on('click', function() {
-        $('.content-wrap').hide();
-        $('.category-6').show();
-    });
-});
+// const basePath = window.location.hostname === 'soonupy.github.io' 
+//     ? '/haru-auto-camping' 
+//     : '';
 
-// 카테고리 전환 함수 생성
-function switchCategory(categoryNum) {
-    $('.content-wrap').hide();
-    $(`.category-${categoryNum}`).show();
-}
+//     $(document).ready(function() {
+//         $('#category-1').on('click', function() {
+//         $('.content-wrap').hide();
+//         $('.category-1').show();
+//     });
+//     $('#category-2').on('click', function() {
+//         $('.content-wrap').hide();
+//         $('.category-2').show();
+//     });
+//     $('#category-3').on('click', function() {
+//         $('.content-wrap').hide();
+//         $('.category-3').show();
+//     });
+//     $('#category-4').on('click', function() {
+//         $('.content-wrap').hide();
+//         $('.category-4').show();
+//     });
+//     $('#category-5').on('click', function() {
+//             $('.content-wrap').hide();
+//             $('.category-5').show();
+//     });
+//     $('#category-6').on('click', function() {
+//         $('.content-wrap').hide();
+//         $('.category-6').show();
+//     });
+// });
 
-$(document).ready(function() {
-    // URL 파라미터에서 카테고리 확인
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category');
-    if (category) {
-        switchCategory(category);
-    }
+// // 카테고리 전환 함수 생성
+// function switchCategory(categoryNum) {
+//     $('.content-wrap').hide();
+//     $(`.category-${categoryNum}`).show();
+// }
 
-    // 카테고리 클릭 이벤트
-    for (let i = 1; i <= 6; i++) {
-        $(`#category-${i}`).on('click', function() {
-            switchCategory(i);
-        });
-    }
-}); 
+// $(document).ready(function() {
+//     // URL 파라미터에서 카테고리 확인
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const category = urlParams.get('category');
+//     if (category) {
+//         switchCategory(category);
+//     }
+
+//     // 카테고리 클릭 이벤트
+//     for (let i = 1; i <= 6; i++) {
+//         $(`#category-${i}`).on('click', function() {
+//             switchCategory(i);
+//         });
+//     }
+// }); 
 
 // $(document).ready(function() {
 //     $('.category-list').load('./facility/facility-category.html', function() {

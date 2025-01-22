@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>HaruCamping</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="96x96" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+
+    <!-- <!- Google Fonts -> -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+    <base href="../">
+
+    <!-- Reset CSS and Custom Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages.js"></script>
+
+    
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="header-wrap">
+
+        </header>
+        <main class="banner-wrap">
+            <div class="main-inner mart-banner">
+                <article class="inner-container">
+                    <h2 class="banner-title">
+                        캠핑장 시설
+                        <p class="banner-desc">HaruCamping에서 머무는 하루가<br>힐링의 순간이 되도록 정성을 다하겠습니다.</p>
+                    </h2>
+                    <a class="reserve-btn" href="reservation.html">
+                        실시간 예약
+                        <i>
+                            <img src="images/reserve-icon.svg" alt="arrow-right">
+                        </i>
+                    </a>
+                </article>
+            </div>
+        </main>
+        <section class="category-wrap select-category">
+            <div class="section-inner">
+                <article class="inner-container">
+                    <h2 class="category-title">
+                        캠핑장 시설
+                        <p class="category-title-en">Campsite Facilities</p>
+                    </h2>
+                    <div class="category-list content-info">
+                        
+                        <input type="radio" name="category" checked id="category-1" onclick="window.location.reload()">
+                        <label for="category-1">
+                                매점
+                                <p>Mart</p>
+                        </label>
+
+                        <input type="radio" name="category" id="category-2" onclick="window.location.assign(basePath + '/explore/amenities.html')">
+                        <label for="category-2">편의시설
+                            <p>Amenities</p>
+                        </label>
+
+                        <input type="radio" name="category" id="category-3">
+                        <label for="category-3">산책로/포토존
+                            <p>Rest Area</p>
+                        </label>
+
+                        <input type="radio" name="category" id="category-4">
+                        <label for="category-6">전기차 충전소
+                            <p>EV Charging</p>
+                        </label>
+                        
+                        <input type="radio" name="category" id="category-5">
+                        <label for="category-5" class="comming-soon">수영장
+                            <p>Pool</p>
+                        </label>
+                        
+                        <input type="radio" name="category" id="category-6">
+                        <label for="category-4" class="comming-soon">카페
+                            <p>Cafe</p>
+                        </label>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+<!-- ----------------- 매점 ----------------- -->
+<section class="content-wrap category-1">
+    <div class="section-inner">
+
+        <!-- 시설 소개 -->
+        <article class="inner-container" id="view-category" role="content info">
+            <h3 class="content-title">
+                매점
+                <p class="category-title-en">Mart</p>
+            </h3>
+            <ul class="content-description">
+                <li class="desc-1 description">
+                    <span>
+                        시설 소개
+                    </span>
+                    <p>장작을 포함한 각종 캠핑용품과 식재료들을 판매하고 있습니다.
+                        <br>
+                        챙겨오지 못한 물건이 있으시다면 매점을 방문해주세요.
+                    </p>
+                </li>
+                <li class="desc-2 description">
+                    <div class="time-info">
+                        <span>
+                            영업시간
+                        </span>
+                        <p>00:00 ~ 24:00</p>
+                    </div>
+                </li>
+                <li class="desc-3 description">
+                    <span>
+                        시설안내
+                    </span>
+                    <div class="Precautions">
+                        <p>면적 : 10평</p>
+                        <p>전자레인지</p>
+                        <p>매점 내 취식 가능</p>
+                    </div>
+                </li>
+            </ul>
+        </article>
+
+        <article class="inner-container" role="content img">
+            <h3 class="content-title">
+                매점 내부
+                <p class="category-title-en">Mart Interior</p>
+            </h3>
+            <ul class="content-card">
+                <li class="img-card">
+                    <img src="images/Mart.png" alt="매점 내부">
+                </li>
+                <li class="img-card">
+                    <img src="images/Mart.png" alt="매점 내부">
+
+                </li>
+                <li class="img-card">
+                    <img src="images/Mart.png" alt="매점 내부">
+
+                </li>
+                <li class="img-card">
+                    <img src="images/Mart.png" alt="매점 내부">
+
+                </li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+        <footer id="footer-wrap">
+        </footer>
+    </div>
+</body>
+
+</html>
