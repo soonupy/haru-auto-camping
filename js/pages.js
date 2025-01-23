@@ -3,6 +3,23 @@ const basePath = window.location.origin === 'http://127.0.0.1:5500'
     ? 'http://127.0.0.1:5500/' 
     : '';
 
+    const martPath = 'explore/mart.html';
+    const amenitiesPath = 'explore/amenities.html';
+
+    const routes = {
+        mart: martPath,
+        amenities: amenitiesPath,
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // link- 로 시작하는 모든 클래스에 대해 처리
+        Object.keys(routes).forEach(key => {
+            document.querySelectorAll(`.link-${key}`).forEach(link => {
+                link.href = routes[key];
+            });
+        });
+    });
+
 // const basePath = window.location.hostname === 'soonupy.github.io' 
 //     ? '/haru-auto-camping' 
 //     : '';
@@ -109,3 +126,15 @@ const basePath = window.location.origin === 'http://127.0.0.1:5500'
 //     if (fileName.includes('cafe')) return 'category-4';
 //     return null;
 // }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryInputs = document.querySelectorAll('input[name="category"]');
+    
+    categoryInputs.forEach(input => {
+        input.addEventListener('change', function() {
+            if (this.dataset.page) {
+                window.location.assign(basePath + 'explore/' + this.dataset.page + '.html');
+            }
+        });
+    });
+});
