@@ -44,6 +44,19 @@ const basePath = window.location.origin === 'http://127.0.0.1:5500'
         });
     });
 
+    
+
+    // export function initializeRoutes() {
+    //     window.addEventListener('load', () => {
+    //         Object.entries(routes).forEach(([className, path]) => {
+    //             const links = document.querySelectorAll(`.${className}`);
+    //             links.forEach(link => {
+    //                 link.href = basePath + path;
+    //             });
+    //         });
+    //     });
+    // }
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const categoryInputs = document.querySelectorAll('input[name="category"]');

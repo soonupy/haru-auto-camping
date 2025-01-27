@@ -122,6 +122,7 @@ section {
             flex-direction: column;
             justify-content: center;
             gap: 64px;
+            
 
             
 
@@ -152,8 +153,10 @@ section {
 
 
                 .category-title-en {
-                    font-size: 1rem;
+                    font-size: 0.875rem;
                     color: var(--sub-text-color-999);
+                    font-weight: 400;
+                    font-family: "Montserrat", sans-serif;
                 }
             }
         }
@@ -325,15 +328,52 @@ section {
         .content-card {
             display: flex;
             flex-wrap: wrap;
-            gap: 32px;
+            gap: 48px 16px;
+            padding: 48px;
+            background-color: var(--point-bgc);
+            box-shadow: var(--general-box-shadow);
+            border-radius: 40px;
+            color: var(--general-text-color);
+
+            .content-title-wrap{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+                gap: 32px;
+                /* color: var(--general-text-color); */
+
+
+                h3{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin: 0 auto 0 0;
+
+                    align-items: flex-start;
+                }
+
+                
+                .content-desc{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    b{
+                        font-size: 1.125rem;
+                        font-weight: 400;
+                        /* color: var(--sub-text-color-666); */
+                    }
+                }
+            }
+
 
             li {
-                width: calc((100% - 32px)/2);
+                width: calc((100% - 32px)/3);
                 /* height: 320px; */
-                aspect-ratio: 1/1;
+                /* aspect-ratio: 1/1; */
                 max-height: 288px;
+                /* width: 100%; */
                 /* aspect-ratio: 3/2; */
-                background-color: #f91;
                 border-radius: 16px;
                 overflow: hidden;
                 box-shadow: var(--general-box-shadow);
