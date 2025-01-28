@@ -16,7 +16,7 @@ main {
         height: 480px;
         padding: 64px;
         overflow: hidden;
-        border-radius: 16px;
+        border-radius: 40px;
 
         &.mart-banner{
             background: url("../images/camping_banner.png") no-repeat center center / cover;
@@ -70,7 +70,7 @@ main {
                 gap: 8px;
                 margin-right: auto;
                 padding: 16px 64px;
-                border-radius: 8px;
+                border-radius: 40px;
                 background-color: var(--point-bgc);
                 color: var(--general-text-color);
                 font-size: 1.125rem;
