@@ -124,23 +124,38 @@ section {
             gap: 64px;
             
 
-            
-
-            .category-title {
+            .content-title-wrap{
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
                 text-align: center;
-                gap: 8px;
-                font-size: 1.5rem;
-                width: fit-content;
-                margin: 0 auto;
+                gap: 24px;
 
-                .category-title-en {
-                    font-size: 1rem;
-                    color: var(--sub-text-color-999);
-                    font-weight: 400;
+                .content-title {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    text-align: center;
+                    gap: 8px;
+                    font-size: 1.5rem;
+                    width: fit-content;
+                    margin: 0 auto 0 0;
+    
+                    .content-title-en {
+                        font-size: 1rem;
+                        color: var(--sub-text-color-999);
+                        font-weight: 400;
+                    }
+                }
+
+                .content-desc{
+                    font-size: 1.125rem;
+                    color: var(--general-text-color);
+                    text-align: left;
                 }
             }
+
+            
             .content-title {
                 display: flex;
                 flex-direction: column;
@@ -151,8 +166,12 @@ section {
                 margin: 0 auto;
                 scroll-margin-top: 160px;
 
+                .content-subtitle{
+                    color: var(--general-text-color);
+                    font :bold 1.25rem / 1.5 "Noto Sans KR";
+                }
 
-                .category-title-en {
+                .content-title-en {
                     font-size: 0.875rem;
                     color: var(--sub-text-color-999);
                     font-weight: 400;
@@ -389,13 +408,32 @@ section {
     }
 }
 
+@media (max-width: 1280px) {
+
+
+section.index-layout {
+    .section-inner {
+        .inner-container {
+                .card-list{
+                    li{
+                        &.facility-icon{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 @media (max-width: 768px) {
     
     main {
         padding: 16px;
 
         .main-inner{
-            border-radius: 8px;
+            border-radius: 24px;
             padding: 32px;
             height: 320px;
 
