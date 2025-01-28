@@ -230,7 +230,7 @@ section.index-layout {
         gap: 128px;
 
         .inner-container {
-            
+
             /* 캠핑장 시설 */
             .card-list {
                 display: flex;
@@ -538,6 +538,24 @@ section.index-layout {
         }
     }
 }
+@media (max-width: 1280px) {
+
+
+    section.index-layout {
+        .section-inner {
+            .inner-container {
+                    .card-list{
+                        li{
+                            &.facility-icon{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
 
 @media (max-width: 768px) {
 
@@ -547,7 +565,7 @@ section.index-layout {
         }
     }
     main{
-        padding: 16px;
+        padding: 16px !important;
 
         .home-banner{
             padding: 32px !important; 
@@ -557,6 +575,11 @@ section.index-layout {
 
             .inner-container{
                 gap: 16px;
+
+                .reserve-btn{
+                    width: 100%;
+                    font-size: 1rem;
+                }
 
                 .banner-title{
                     order: -2;
@@ -631,6 +654,8 @@ section.index-layout {
                     li{
                         width: 100%;
 
+
+
                         .card-info{
                             span{
                                 font-size: 1rem;
@@ -680,20 +705,19 @@ section.index-layout {
 
                 &.phrase-layout{
                     flex-direction: column;
-                    padding: 16px;
-                    border-radius: 8px;
-
-                    > div{
-                        width: 100%;
-                    }
+                    padding: 24px;
+                    border-radius: 24px;
+                    gap: 24px;
 
                     .phrase-img{
                         height: 160px;
-                        border-radius: 4px;
+                        border-radius: 16px;
+                        width: 100%;
                     }
 
                     .phrase-wrap{
                         gap: 16px;
+                        width: 100%;
 
                         .phrase-title{
                             font-size: 1rem;
