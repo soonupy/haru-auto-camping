@@ -122,6 +122,16 @@ section {
             flex-direction: column;
             justify-content: center;
             gap: 64px;
+
+            .content-card{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                padding: 40px;
+                border-radius: 40px;
+                background-color: var(--point-bgc);
+                box-shadow: var(--general-box-shadow);
+            }
             
 
             .content-title-wrap{
@@ -131,24 +141,9 @@ section {
                 text-align: center;
                 gap: 24px;
 
-                .content-title {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    text-align: center;
-                    gap: 8px;
-                    font-size: 1.5rem;
-                    width: fit-content;
-                    margin: 0 auto 0 0;
-    
-                    .content-title-en {
-                        font-size: 1rem;
-                        color: var(--sub-text-color-999);
-                        font-weight: 400;
-                    }
-                }
+                
 
-                .content-desc{
+                .content-desc-left{
                     font-size: 1.125rem;
                     color: var(--general-text-color);
                     text-align: left;
@@ -165,14 +160,20 @@ section {
                 width: fit-content;
                 margin: 0 auto;
                 scroll-margin-top: 160px;
+                color: var(--general-text-color);
+
+                &.content-title-left {
+                    align-items: flex-start;
+                    text-align: left;
+                    margin: 0 auto 0 0;
+                }
 
                 .content-subtitle{
-                    color: var(--general-text-color);
                     font :bold 1.25rem / 1.5 "Noto Sans KR";
                 }
 
                 .content-title-en {
-                    font-size: 0.875rem;
+                    font-size: 1rem;
                     color: var(--sub-text-color-999);
                     font-weight: 400;
                     font-family: "Montserrat", sans-serif;
@@ -385,8 +386,12 @@ section {
                 }
             }
 
+            .card-list{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
 
-            li {
+                li {
                 width: calc((100% - 32px)/3);
                 /* height: 320px; */
                 /* aspect-ratio: 1/1; */
