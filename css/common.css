@@ -294,6 +294,29 @@ html {
         }
 
     }
+
+    .reserve-common-btn{
+        position: fixed;
+        bottom: 48px;
+        right: 48px;
+
+
+        a{
+            width: 64px;
+            height: 64px;
+            background-color: var(--point-bgc);
+            box-shadow: var(--general-box-shadow);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
 }
 
 
@@ -453,6 +476,22 @@ html {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .reserve-common-btn{
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+    
+            a{
+                width: 48px;
+                height: 48px;
+    
+                img{
+                    width: 24px;
+                    height: 24px;
                 }
             }
         }
