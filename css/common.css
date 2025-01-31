@@ -304,7 +304,7 @@ html {
         a{
             width: 64px;
             height: 64px;
-            background-color: var(--point-bgc);
+            background-color: var(--primary-color);
             box-shadow: var(--general-box-shadow);
             border-radius: 50%;
             display: flex;
@@ -486,12 +486,12 @@ html {
             right: 24px;
     
             a{
-                width: 48px;
-                height: 48px;
+                width: 64px;
+                height: 64px;
     
                 img{
-                    width: 24px;
-                    height: 24px;
+                    width: 32px;
+                    height: 32px;
                 }
             }
         }
