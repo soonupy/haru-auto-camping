@@ -295,41 +295,36 @@ html {
 
     }
 
-    .reserve-common-btn{
+    .reserve-common-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
         position: fixed;
         bottom: 48px;
         right: 48px;
 
-        #reserve-text {
-            position: absolute;
-            top: -2.5rem;
-            left: 50%;
-            /* transform: translate(0, -35%); */
-            transform: translateX(-50%);
+        .top-btn{
             display: flex;
-            flex-direction: column;
             align-items: center;
-            opacity: 1;
-            z-index: 99999;
-            width: 24px;
-            height: 24px;
+            justify-content: center;
+            gap: 4px;
+            background-color: #efefef;
+            font-size: 0.875rem;
+            padding: 4px 8px;
+            border-radius: 16px;
+            margin-bottom: 8px;
+            width: 64px;
 
-            p {
-                margin-top: 8px;
-                text-align: center;
-                display: flex;
-                text-wrap: nowrap;
-                color: #222;
-                font-size: 0.875rem;
+            img{
+                rotate: -90deg;
+                width: 14px;
+                height: 14px;
             }
-            
         }
     
-
-
-
-
-        a{
+        .reserve-btn{
             width: 64px;
             height: 64px;
             background-color: var(--primary-color);
@@ -343,6 +338,13 @@ html {
                 width: 32px;
                 height: 32px;
             }
+        }
+        .reserve-text {
+            text-align: center;
+            display: flex;
+            color: var(--general-text-color);
+            font-size: 0.875rem ;
+            
         }
     }
 }
@@ -515,12 +517,12 @@ html {
             }
         }
 
-        .reserve-common-btn{
+        .reserve-common-wrap{
             position: fixed;
             bottom: 24px;
             right: 24px;
     
-            a{
+            .reserve-btn{
                 width: 64px;
                 height: 64px;
     

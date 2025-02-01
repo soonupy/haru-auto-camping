@@ -150,6 +150,12 @@ section {
                 scroll-margin-top: 160px;
                 color: var(--general-text-color);
 
+                &.content-title-left {
+                    align-items: flex-start;
+                    text-align: left;
+                    margin: 0 auto 0 0;
+                }
+
                 .content-subtitle {
                     font: bold 1.25rem / 1.5 "Noto Sans KR";
                 }
@@ -423,10 +429,10 @@ section {
                 gap: 32px;
 
                 .content-title {
-                    &.content-title-left {
+                    &.m_content-title-left {
                         align-items: flex-start;
                         text-align: left;
-                        margin: 0 auto 0 0;
+                        margin: 0 auto 0 0 !important;
                     }
                 }
 

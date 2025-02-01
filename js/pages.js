@@ -46,6 +46,8 @@ const basePath = window.location.origin === 'http://127.0.0.1:5500'
 
     
 
+    
+
     // export function initializeRoutes() {
     //     window.addEventListener('load', () => {
     //         Object.entries(routes).forEach(([className, path]) => {
