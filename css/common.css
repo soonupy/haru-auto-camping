@@ -310,17 +310,16 @@ html {
             align-items: center;
             justify-content: center;
             gap: 4px;
-            background-color: #efefef;
+            background-color: var(--primary-color);
             font-size: 0.875rem;
-            padding: 4px 8px;
-            border-radius: 16px;
-            margin-bottom: 8px;
-            width: 64px;
+            padding: 6px;
+            border-radius: 24px;
+            margin-bottom: 16px;
 
             img{
-                rotate: -90deg;
-                width: 14px;
-                height: 14px;
+                /* rotate: -90deg; */
+                width: 24px;
+                height: 24px;
             }
         }
     
