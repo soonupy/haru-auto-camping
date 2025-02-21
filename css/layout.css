@@ -16,6 +16,8 @@ main {
         padding: 64px;
         overflow: hidden;
         border-radius: 40px;
+        background: url("../images/main-img.jpg") no-repeat center bottom / cover;
+        background-attachment: fixed;
 
         &.mart-banner {
             background: url("../images/camping_banner.png") no-repeat center center / cover;
@@ -67,6 +69,7 @@ main {
                 border-radius: 40px;
                 background-color: var(--point-bgc);
                 color: var(--general-text-color);
+
                 font-size: 1.125rem;
                 font-weight: 600;
 
@@ -75,6 +78,9 @@ main {
                     align-items: center;
                     justify-content: center;
                     width: 1.25rem;
+                    img {
+                        filter: brightness(0);
+                    }
                 }
 
                 &:hover {
@@ -274,7 +280,7 @@ section {
 
                 .time-info {
                     display: flex;
-                    /* flex-direction: column; */
+                    flex-direction: column;
                     gap: 32px;
                 }
 
@@ -304,6 +310,12 @@ section {
                         letter-spacing: 1px;
                         /* color: #fff; */
                     }
+                }
+ 
+                
+                .contetnt-info {
+                    color: var(--general-text-color);
+                    font: 400 1.125rem/1.5 "pretendard";
                 }
 
                 .Precautions {
@@ -371,6 +383,22 @@ section {
                         /* color: var(--sub-text-color-666); */
                     }
                 }
+                .list-desc {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+
+                    p {
+                        padding: 6px 12px;
+                        /* background-color: var(--primary-color); */
+                        /* font-size: 1rem; */
+                        color: var(--sub-text-color-666);
+                        border: 1px solid var(--sub-text-color-999);
+                        border-radius: 24px;
+                        letter-spacing: 1px;
+                        /* color: #fff; */
+                    }
+                }  
             }
 
             .card-list {
@@ -379,7 +407,7 @@ section {
                 gap: 16px;
 
                 li {
-                    width: calc((100% - 16px)/2);
+                    width: calc((100% - 32px)/3);
                     /* height: 320px; */
                     /* aspect-ratio: 1/1; */
                     max-height: 288px;
@@ -446,11 +474,11 @@ section {
                     border-radius: 24px;
 
                     .card-list {
-                        gap: 16px;
+                        gap: 8px;
 
                         li {
                             width: 100%;
-                            border-radius: 16px;
+                            border-radius: 8px;
                             max-height: 178px;
                         }
                     }
