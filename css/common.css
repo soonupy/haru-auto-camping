@@ -32,7 +32,7 @@ html {
         height: 80px;
         justify-content: space-between;
         align-items: center;
-        border-radius: 40px;
+        border-radius: 24px;
         backdrop-filter: blur(8px);
 
         .header-left {
@@ -311,7 +311,7 @@ html {
             justify-content: center;
             gap: 4px;
             /* background-color: var(--primary-color); */
-            background-color: var(--primary-color-hover);
+            background-color: var(--sub-text-color-999);
             font-size: 0.875rem;
             padding: 4px;
             border-radius: 24px;
