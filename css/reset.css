@@ -90,6 +90,9 @@ body, html {
 
 @media (max-width: 768px) {
     body, html {
+        font-size: 14px;
+        
+
         overflow-y: auto;
         &::-webkit-scrollbar {
             display: none; /* Chrome, Safari, Opera */

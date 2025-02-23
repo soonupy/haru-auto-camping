@@ -13,21 +13,21 @@ html {
     margin-inline: auto;
     /* margin-top: 32px; */
     z-index: 99;
-    padding: 32px 32px 0 32px;
+    /* padding: 32px 32px 0 32px; */
     display: flex;
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     color: var(--general-text-color);
+    background-color: var(--point-bgc);
+    box-shadow: var(--general-box-shadow);
+    padding: 0 32px;
 
     .header_inner {
-        margin: 0 auto;
+        /* margin: 0 auto; */
         width: 100%;
-        padding: 16px 32px;
         max-width: 1280px;
-        background-color: var(--point-bgc);
-        box-shadow: var(--general-box-shadow);
         display: flex;
         height: 80px;
         justify-content: space-between;
@@ -82,13 +82,20 @@ html {
                         bottom: 0;
                         left: 50%;
                         width: 0;
+                        border-radius: 4px;
                         height: 3px;
-                        background-color: #222;
+                        background-color: var(--primary-color);
                         transition: width 0.3s ease;
                         transform: translateX(-50%);
                     }
 
                     &:hover {
+
+                        li{
+                            .nav-name{
+                                color: var(--general-text-color);
+                            }
+                        }
 
                         &::after {
                             width: 100%;
@@ -300,7 +307,7 @@ html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 8px;
+        gap: 0.75rem;
         position: fixed;
         bottom: 48px;
         right: 48px;
@@ -315,7 +322,7 @@ html {
             font-size: 0.875rem;
             padding: 4px;
             border-radius: 24px;
-            margin-bottom: 8px;
+            /* margin-bottom: 8px; */
             width: 100%;
 
             img{
@@ -326,8 +333,8 @@ html {
         }
     
         .reserve-btn{
-            width: 64px;
-            height: 64px;
+            width: 4rem;
+            height: 4rem;
             background-color: var(--primary-color);
             box-shadow: var(--general-box-shadow);
             border-radius: 50%;
@@ -370,11 +377,11 @@ html {
     }
 
     #header-wrap {
-        padding: 16px 16px 0 16px;
+        /* padding: 16px 16px 0 16px; */
         top: 0;
+        padding: 0 16px;
         /* margin-top: 16px; */
         .header_inner {
-            padding: 0 24px;
             height: 64px;
             border-radius: 24px;
 
@@ -524,8 +531,8 @@ html {
             right: 24px;
     
             .reserve-btn{
-                width: 64px;
-                height: 64px;
+                /* width: 64px; */
+                /* height: 64px; */
     
                 img{
                     width: 32px;

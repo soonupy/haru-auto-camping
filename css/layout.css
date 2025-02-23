@@ -12,7 +12,7 @@ main {
         justify-content: flex-start;
         gap: 16px;
         height: 480px;
-        padding: 64px;
+        padding: 3rem;
         overflow: hidden;
         border-radius: 1.5rem;
         background: url("../images/main-img.jpg") no-repeat center bottom / cover;
@@ -48,7 +48,7 @@ main {
                 gap: 24px;
                 width: 100%;
                 font-size: 2rem;
-                font-weight: 700;
+                font-weight: 600;
                 color: #fff;
 
                 p {
@@ -125,7 +125,7 @@ section {
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
-                padding: 1.5rem;
+                padding: 3rem;
                 border-radius: 1.5rem;
                 background-color: var(--point-bgc);
                 box-shadow: var(--general-box-shadow);
