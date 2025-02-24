@@ -71,3 +71,21 @@ const basePath = window.location.origin === 'http://127.0.0.1:5500'
 //         });
 //     });
 // });
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 16,
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        }
+    }
+});
