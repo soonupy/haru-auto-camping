@@ -11,17 +11,16 @@ main {
         flex-direction: column;
         justify-content: flex-start;
         gap: 16px;
-        height: 20rem;
-        padding: 3rem;
+        height: 32rem;
         overflow: hidden;
+        /* padding: 3rem; */
         border-radius: 1.5rem;
-        background: url("../images/main-img.jpg") no-repeat center bottom / cover;
         /* background-attachment: fixed; */
 
-        &.mart-banner {
-            background: url("../images/camping_banner.png") no-repeat center center / cover;
+        &.home-banner {
+            background: url("../images/main-img.jpg") no-repeat center bottom / cover;
 
-            &:after {
+            &:after{
                 content: "";
                 position: absolute;
                 top: 0;
@@ -30,6 +29,17 @@ main {
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.25);
             }
+        }
+
+        &.sub-banner {
+            height: 24rem;
+        }
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
         .inner-container {
@@ -119,12 +129,12 @@ section {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 64px;
+            gap: 48px;
 
             .content-card {
                 display: flex;
                 flex-direction: column;
-                gap: 40px;
+                gap: 3rem;
                 padding: 3rem;
                 border-radius: 1.5rem;
                 background-color: var(--point-bgc);
@@ -434,18 +444,15 @@ section {
 @media (max-width: 768px) {
     main {
         padding: 16px;
-
+        
         .main-inner {
-            border-radius: 1.5rem;
-            padding: 2rem;
-            /* height: 320px; */
+            /* aspect-ratio: 1/1; */
+            border-radius: 16px;
+            /* padding: 2rem; */
+            height: 16rem;
 
-            .inner-container {
-                .reserve-btn {
-                    width: 100%;
-                    font-size: 1rem;
-                }
-            }
+
+
         }
     }
     section {
@@ -456,9 +463,16 @@ section {
 
             .inner-container {
                 gap: 32px;
+                border-radius: 16px;
 
                 .content-card {
-                    gap: 40px;
+                    gap: 24px;
+                    padding: 16px;
+
+                    .content-title-wrap {
+                        padding: 16px 0;
+
+                    }
 
                     .card-list {
                         /* gap: 8px; */

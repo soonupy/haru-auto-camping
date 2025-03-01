@@ -174,6 +174,7 @@ main {
                 bottom: -64px;
                 right: 0;
                 transform: translateY(0);
+                display: none;
 
                 i {
                     position: absolute;
@@ -265,7 +266,7 @@ section.index-layout {
                         overflow: hidden;
                         width: 100%;
                         height: 100%;
-                        padding: 24px;
+                        padding: 2rem;
                         background-color: #efefef;
                         display: flex;
                         flex-direction: column;
@@ -354,7 +355,7 @@ section.index-layout {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        border-radius: 120px;
+                        border-radius: 1.5rem;
                         box-shadow: var(--general-box-shadow);
                         background-color: var(--point-bgc);
                         width: 240px;
@@ -435,69 +436,106 @@ section.index-layout {
                 flex-direction: row;
                 gap: 32px;
                 background-color: var(--point-bgc);
-                padding: 32px;
-                /* border-radius: 40px; */
+                /* padding: 32px; */
+                color: var(--general-bgc);
+                border-radius: 1.5rem;
                 box-shadow: var(--general-box-shadow);
                 /* font-family: 'Nanum Myeongjo', serif; */
-                font-family: "Cafe24Oneprettynight", sans-serif;
+                /* font-family: "Cafe24Oneprettynight", sans-serif; */
 
                 > div {
                     width: calc(50% - 8px);
                 }
 
                 .phrase-img {
+                    position: relative;
                     overflow: hidden;
-                    border-radius: 16px;
-                    height: 320px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 1.5rem;
+                    height: 160px;
+                    width: 100%;
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
 
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
-                }
+                    .phrase-wrap {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 48px;
+                        line-height: 1.5;
+                        z-index: 1;
 
-                .phrase-wrap {
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    gap: 32px;
-                    line-height: 1.5;
-
-                    .phrase-title {
+                        .phrase-title {
                         font-size: 1.125rem;
-                        /* font-weight: 700; */
-                        color: var(--general-text-color);
+                            display: none;
+                            /* font-weight: 700; */
+                            /* color: var(--general-text-color); */
+                        }
+                        .slogan-wrap{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            
+                            
+                            .phrase-slogan {
+                            text-align: center;
+                            font-size: 1rem;
+                            /* line-height: 2; */
+                            font-weight: 300;
+                            /* color: var(--general-text-color); */
+                            justify-content: flex-start;
+                        }
+                        }
+    
+                        
+    
+                        hr {
+                            width: 64px;
+                        }
+    
+                        .phrase-desc {
+                            font-size: 1rem;
+                            color: #ddd;
+                            /* color: var(--general-text-color); */
+                        }
+    
                     }
-
-                    .phrase-slogan {
-                        font-size: 1.25rem;
-                        font-weight: 700;
-                        color: var(--general-text-color);
-                        justify-content: flex-start;
-                    }
-
-                    hr {
-                        width: 64px;
-                    }
-
-                    .phrase-desc {
-                        font-size: 0.875rem;
-                        color: var(--general-text-color);
-                    }
-
                 }
+
             }
 
             &.map-layout {
                 font-family: "Montserrat", sans-serif;
 
                 .map-wrap{
+                    position: relative;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
 
                     .view-detail{
+                        position: absolute;
+                        top: -40px;
+                        right: 0;
                         display: flex;
                         align-items: center;
                         gap: 8px;
@@ -526,7 +564,7 @@ section.index-layout {
                     }
                     .map {
                         overflow: hidden;
-                        border-radius: 24px;
+                        border-radius: 1.5rem;
                         box-shadow: var(--general-box-shadow);
     
                         img {
@@ -573,13 +611,13 @@ section.index-layout {
         padding: 16px !important;
 
         .home-banner{
-            padding: 32px !important; 
+            padding: 2rem; 
             border-radius: 8px;
             height: fit-content;
-            height: fit-content !important;
 
             .inner-container{
                 gap: 16px;
+                justify-content: center !important;
 
                 .reserve-btn{
                     width: 100%;
@@ -588,8 +626,9 @@ section.index-layout {
 
                 .banner-title{
                     order: -2;
-                    font-size: 1.5rem;
-                    gap: 16px;
+                    font-size: 1.5rem !important;
+                    gap: 16px !important;
+                    text-align: center;
 
                     .banner-desc{
                         font-size: 1rem;
@@ -637,10 +676,10 @@ section.index-layout {
         padding: 32px 16px;
 
         .section-inner{
-            gap: 64px;
+            gap: 48px;
 
             .inner-container{
-                gap: 40px;
+                gap: 24px;
 
                 .moreview{
                     .moreview-link{
@@ -663,6 +702,7 @@ section.index-layout {
                         
 
                         .card-info{
+                            gap: 8px;
                             span{
                                 font-size: 1rem;
                                 line-height: 1.25;
@@ -673,8 +713,9 @@ section.index-layout {
                         }
 
                         .card-img{
-                            border-radius: 16px;
-                            gap: 24px;
+                            border-radius: 8px;
+                            gap: 16px;
+                            padding: 16px;
 
                             .card-info-icon{
                                 width: 32px;
@@ -686,10 +727,10 @@ section.index-layout {
                     &.rule-list{
 
                         .card-item{
-                            border-radius: 24px;
+                            border-radius: 16px;
                             width: 100%;
                             aspect-ratio: initial;
-                            padding: 24px;
+                            padding: 16px;
 
                             a{
                                 flex-direction: row;
@@ -716,13 +757,13 @@ section.index-layout {
 
                 &.phrase-layout{
                     flex-direction: column;
-                    padding: 24px;
-                    border-radius: 24px;
-                    gap: 40px;
+                    padding: 16px;
+                    border-radius: 16px;
+                    gap: 24px;
 
                     .phrase-img{
                         height: 160px;
-                        border-radius: 16px;
+                        border-radius: 8px;
                         width: 100%;
                     }
 
@@ -735,7 +776,7 @@ section.index-layout {
                         }
 
                         .phrase-slogan{
-                            font-size: 1.125rem;
+                            font-size: 1rem;
                         }
 
                         .phrase-desc{
@@ -755,6 +796,7 @@ section.index-layout {
                         .view-detail{
                             font-size: 1rem;
                             gap: 4px;
+                            top: -24px;
 
                             i{
                                 width: 14px;
@@ -763,7 +805,7 @@ section.index-layout {
                         }
 
                         .map{
-                            border-radius: 24px;
+                            border-radius: 16px;
                         }
                     }
                 }

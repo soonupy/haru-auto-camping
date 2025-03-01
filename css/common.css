@@ -37,6 +37,7 @@ html {
         backdrop-filter: blur(8px);
 
         .header-left {
+            width: 100%;
             display: flex;
             align-items: center;
             gap: 32px;
@@ -384,7 +385,7 @@ html {
         /* margin-top: 16px; */
         .header_inner {
             height: 64px;
-            border-radius: 24px;
+            border-radius: 16px;
 
             .header-left {
                 .header-logo {
@@ -416,10 +417,10 @@ html {
                         box-shadow: var(--general-box-shadow);
                         border-radius: 16px;
                         top: 54px;
-                        right: 0;
+                        right: -4px;
                         display: none;
                         flex-direction: column;
-                        width: calc(100vw - 32px);
+                        width: calc(100vw - 24px);
 
                         &.active {
                             display: flex;
