@@ -33,6 +33,21 @@ main {
 
         &.sub-banner {
             height: 24rem;
+
+            .banner-title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+                text-align: left;
+
+                p {
+                    font-size: 1rem;
+                    font-weight: normal;
+                    line-height: 1.5;
+                    /* color: #666; */
+                }
+            }
         }
         
         img{
@@ -44,7 +59,11 @@ main {
 
         .banner-title {
                 position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 display: flex;
+                text-align: center;
                 flex-direction: column;
                 padding: 3rem;
                 gap: 24px;
@@ -130,6 +149,67 @@ section {
             justify-content: center;
         }
 
+        
+        .inner-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 48px;
+        
+            .content-card {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                padding: 3rem;
+                border-radius: 1.5rem;
+                background-color: var(--point-bgc);
+                box-shadow: var(--general-box-shadow);
+            }
+        
+            .content-title-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+                gap: 24px;
+        
+                .content-desc-left {
+                    font-size: 1.125rem;
+                    color: var(--general-text-color);
+                    text-align: left;
+                }
+            }
+        
+            .content-title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                font-size: 1.5rem;
+                width: fit-content;
+                margin: 0 auto;
+                scroll-margin-top: 160px;
+                color: var(--general-text-color);
+        
+                &.content-title-left {
+                    align-items: flex-start;
+                    text-align: left;
+                    margin: 0 auto 0 0;
+                }
+        
+                .content-subtitle {
+                    font: bold 1.25rem / 1.5 "Noto Sans KR";
+                }
+        
+                .content-title-en {
+                    font-size: 0.875rem;
+                    color: var(--sub-text-color-999);
+                    font-weight: 400;
+                    font-family: "Montserrat", sans-serif;
+                }
+            }
+        }
+
         .category-container {
             display: flex;
             flex-direction: column;
@@ -139,64 +219,15 @@ section {
             box-shadow: var(--general-box-shadow);
             padding: 3rem;
             border-radius: 1.5rem;
-            .inner-container {
+
+            .content-card {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                gap: 48px;
-            
-                .content-card {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 3rem;
-                    /* padding: 3rem; */
-                    border-radius: 1.5rem;
-                    /* background-color: var(--point-bgc); */
-                    /* box-shadow: var(--general-box-shadow); */
-                }
-            
-                .content-title-wrap {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    text-align: center;
-                    gap: 24px;
-            
-                    .content-desc-left {
-                        font-size: 1.125rem;
-                        color: var(--general-text-color);
-                        text-align: left;
-                    }
-                }
-            
-                .content-title {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 8px;
-                    font-size: 1.5rem;
-                    width: fit-content;
-                    margin: 0 auto;
-                    scroll-margin-top: 160px;
-                    color: var(--general-text-color);
-            
-                    &.content-title-left {
-                        align-items: flex-start;
-                        text-align: left;
-                        margin: 0 auto 0 0;
-                    }
-            
-                    .content-subtitle {
-                        font: bold 1.25rem / 1.5 "Noto Sans KR";
-                    }
-            
-                    .content-title-en {
-                        font-size: 0.875rem;
-                        color: var(--sub-text-color-999);
-                        font-weight: 400;
-                        font-family: "Montserrat", sans-serif;
-                    }
-                }
+                gap: 3rem;
+                padding: inherit;
+                border-radius: inherit;
+                background-color: inherit;
+                box-shadow: inherit;
             }
         }
 
@@ -477,9 +508,15 @@ section {
         .section-inner {
             gap: 64px;
 
+            
+
             .inner-container {
                 gap: 32px;
                 border-radius: 16px;
+
+                .content-description {
+                    gap: 32px;
+                }
 
                 .content-card {
                     gap: 24px;
@@ -492,12 +529,25 @@ section {
 
                     .card-list {
                         /* gap: 8px; */
+                        flex-direction: column;
 
                         li {
                             width: 100%;
                             max-height: 178px;
                         }
                     }
+                }
+            }
+
+            .category-container {
+                padding: 24px;
+                border-radius: 16px;
+                gap: 32px;
+
+                .content-card {
+                    padding: 0;
+                    border-radius: 16px;
+                    gap: 32px;
                 }
             }
         }
