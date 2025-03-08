@@ -42,19 +42,11 @@ main {
             object-position: center;
         }
 
-        .inner-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 16px;
-            border-radius: 1.5rem;
-            flex: 1;
-
-            z-index: 1;
-
-            .banner-title {
+        .banner-title {
+                position: absolute;
                 display: flex;
                 flex-direction: column;
+                padding: 3rem;
                 gap: 24px;
                 width: 100%;
                 font-size: 2rem;
@@ -68,6 +60,19 @@ main {
                     /* color: #666; */
                 }
             }
+
+        .inner-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+            border-radius: 1.5rem;
+            flex: 1;
+
+            z-index: 1;
+
+            
 
             .reserve-btn {
                 display: flex;
@@ -125,65 +130,76 @@ section {
             justify-content: center;
         }
 
-        .inner-container {
+        .category-container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 48px;
-
-            .content-card {
+            gap: 64px;
+            padding: 2rem 0;
+            background-color: var(--point-bgc);
+            box-shadow: var(--general-box-shadow);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            .inner-container {
                 display: flex;
                 flex-direction: column;
-                gap: 3rem;
-                padding: 3rem;
-                border-radius: 1.5rem;
-                background-color: var(--point-bgc);
-                box-shadow: var(--general-box-shadow);
-            }
-
-            .content-title-wrap {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: center;
-                gap: 24px;
-
-                .content-desc-left {
-                    font-size: 1.125rem;
-                    color: var(--general-text-color);
-                    text-align: left;
+                justify-content: center;
+                gap: 48px;
+            
+                .content-card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+                    /* padding: 3rem; */
+                    border-radius: 1.5rem;
+                    /* background-color: var(--point-bgc); */
+                    /* box-shadow: var(--general-box-shadow); */
                 }
-            }
-
-            .content-title {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 8px;
-                font-size: 1.5rem;
-                width: fit-content;
-                margin: 0 auto;
-                scroll-margin-top: 160px;
-                color: var(--general-text-color);
-
-                &.content-title-left {
+            
+                .content-title-wrap {
+                    display: flex;
+                    flex-direction: column;
                     align-items: flex-start;
-                    text-align: left;
-                    margin: 0 auto 0 0;
+                    text-align: center;
+                    gap: 24px;
+            
+                    .content-desc-left {
+                        font-size: 1.125rem;
+                        color: var(--general-text-color);
+                        text-align: left;
+                    }
                 }
-
-                .content-subtitle {
-                    font: bold 1.25rem / 1.5 "Noto Sans KR";
-                }
-
-                .content-title-en {
-                    font-size: 0.875rem;
-                    color: var(--sub-text-color-999);
-                    font-weight: 400;
-                    font-family: "Montserrat", sans-serif;
+            
+                .content-title {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 1.5rem;
+                    width: fit-content;
+                    margin: 0 auto;
+                    scroll-margin-top: 160px;
+                    color: var(--general-text-color);
+            
+                    &.content-title-left {
+                        align-items: flex-start;
+                        text-align: left;
+                        margin: 0 auto 0 0;
+                    }
+            
+                    .content-subtitle {
+                        font: bold 1.25rem / 1.5 "Noto Sans KR";
+                    }
+            
+                    .content-title-en {
+                        font-size: 0.875rem;
+                        color: var(--sub-text-color-999);
+                        font-weight: 400;
+                        font-family: "Montserrat", sans-serif;
+                    }
                 }
             }
         }
+
     }
 }
 
@@ -360,10 +376,10 @@ section {
             display: flex;
             flex-wrap: wrap;
             gap: 48px 16px;
-            padding: 48px;
-            background-color: var(--point-bgc);
-            box-shadow: var(--general-box-shadow);
-            border-radius: 2.5rem;
+            /* padding: 48px; */
+            /* background-color: var(--point-bgc); */
+            /* box-shadow: var(--general-box-shadow); */
+            /* border-radius: 2.5rem; */
             color: var(--general-text-color);
 
             .content-title-wrap {
